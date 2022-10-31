@@ -3,9 +3,142 @@
   padding: 0;
   margin: 0;
 }
-
 .flow {
   width: 100%;
-  height: 62px;
+  height: 110px;
   background-color: #f0f0f0;
+  position: relative;
+}
+.flow span {
+  width: 40px;
+  font-size: 20px;
+  display: inline-block;
+  height: 60px;
+  padding-left: 11px;
+  border-left: 6px #fe5341 solid;
+  position: absolute;
+  left: 133px;
+  top: 32px;
+}
+.flow ul {
+  margin-left: 150px;
+}
+.flow ul li {
+  width: 60px;
+  margin: 0 40px 0 114px;
+  float: left;
+  list-style: none;
+  height: 25px;
+  padding-top: 70px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #737373;
+}
+.flow ul li:nth-of-type(1) {
+  background: url(../../img/use1.png) no-repeat center 22px;
+  border-bottom: 2px solid #fe5341;
+}
+.flow ul li:nth-of-type(2) {
+  background: url(../../img/use2.png) no-repeat center 22px;
+}
+.flow ul li:nth-of-type(3) {
+  background: url(../../img/use3.png) no-repeat center 22px;
+}
+.flow ul li:nth-of-type(4) {
+  background: url(../../img/use4.png) no-repeat center 22px;
+}
+.flow ul li:nth-of-type(5) {
+  background: url(../../img/use5.png) no-repeat center 22px;
+}
+/* 版心 */
+.continer {
+  width: 1000px;
+  margin: 0 auto;
+}
+.continer .have {
+  display: inline-block;
+  font-size: 20px;
+  padding-left: 11px;
+  margin: 45px 0 10px 0;
+  border-left: 6px #fe5341 solid;
+}
+.continer .product {
+  width: 100%;
+  color: #333;
+  display: flex;
+  margin-bottom: 65px;
+}
+.continer .product .introduce {
+  width: 70%;
+}
+.continer .product .introduce h3 {
+  margin: 15px 0 25px 0;
+}
+.continer .product .introduce h3:nth-of-type(1) {
+  color: #ff0000;
+}
+.continer .product .introduce img {
+  width: 650px;
+  height: 433px;
+  margin: 20px 0 0 0;
+}
+.continer .product .introduce h4 {
+  margin: 25px 0 30px 0;
+  color: #0070c0;
+}
+.continer .product .introduce .own {
+  color: #0177A7;
+  display: inline-block;
+  margin: 30px 0 20px 0;
+}
+.continer .product .introduce .red {
+  color: #ff0000;
+  margin-bottom: 0;
+}
+.continer .buy {
+  width: 30%;
+  color: #a3a3a3;
+}
+.continer .buy .have1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+}
+.continer .buy .price {
+  font-size: 40px;
+  color: #fe5341;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.continer .buy .btn {
+  width: 100%;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #fe5341;
+  text-align: center;
+  border-radius: 5px;
+}
+.continer .buy .from {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0 -5px 0;
+}
+.continer .buy img {
+  width: 299px;
+  height: 185px;
+}
+.continer .buy img:nth-of-type(2) {
+  height: 135px;
+}
+.continer .buy h4 {
+  color: #333;
+  margin: 10px 0;
+}
+.continer .buy p {
+  font-size: 14px;
 }
