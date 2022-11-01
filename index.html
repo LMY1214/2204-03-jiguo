@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
 </head>
 
 <body>
@@ -20,8 +21,8 @@
                 <span>￥599</span>
                 <span><span class="numLose">20</span>台</span>
             </div>
-            <div>申请时间剩余：<span class="time">13天5小时37分钟</span></div>
-            <div>立即申请</div>
+            <div class="timebig">申请时间剩余：<span class="time">13天5小时37分钟</span></div>
+            <div class="applying">立即申请</div>
         </div>
 
     </nav>
@@ -33,58 +34,179 @@
             <div class="title">
                 <span>热门试用</span>
             </div>
-            <div class="s_left arrows">
+            <!-- <div class="s_left arrows">
                 <img src="./img/prev.png" alt="">
 
             </div>
             <div class="s_right arrows">
                 <img src="./img/next.png" alt="">
-            </div>
+            </div> -->
             <div class="s_content">
-                <div>
-                    <em>首发</em>
-                    <img src="./img/hot11.jpg" alt="">
-                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
-                    <div class="s_num">
-                        <span>2032</span>
-                        <span>20台</span>
+                <!-- 轮播图 -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="item1">
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余时间2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第二屏 -->
+                        <div class="swiper-slide">
+                            <div class="item1">
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot12.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余时间2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 第三屏 -->
+                        <div class="swiper-slide">
+                            <div class="item1">
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot10.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余时间2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                                <div class="item">
+                                    <em>首发</em>
+                                    <img src="./img/hot11.jpg" alt="">
+                                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
+                                    <div class="s_num">
+                                        <span>2032</span>
+                                        <span>20台</span>
+                                    </div>
+                                    <div class="s_apply"><span>1392</span>申请</div>
+                                    <div class="s_time">剩余2天</div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
-                    <div class="s_apply"><span>1392</span>申请</div>
-                    <div class="s_time">剩余时间2天</div>
+                    <!-- 如果需要分页器 -->
+                    <!-- <div class="swiper-pagination"></div> -->
+
+                    <!-- 如果需要导航按钮
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+
+                    <!-- 如果需要滚动条 -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
                 </div>
-                <div>
-                    <em>首发</em>
-                    <img src="./img/hot11.jpg" alt="">
-                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
-                    <div class="s_num">
-                        <span>2032</span>
-                        <span>20台</span>
-                    </div>
-                    <div class="s_apply"><span>1392</span>申请</div>
-                    <div class="s_time">剩余2天</div>
-                </div>
-                <div>
-                    <em>首发</em>
-                    <img src="./img/hot11.jpg" alt="">
-                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
-                    <div class="s_num">
-                        <span>2032</span>
-                        <span>20台</span>
-                    </div>
-                    <div class="s_apply"><span>1392</span>申请</div>
-                    <div class="s_time">剩余2天</div>
-                </div>
-                <div>
-                    <em>首发</em>
-                    <img src="./img/hot11.jpg" alt="">
-                    <div class="describe">巴慕达 The Toaster 烤面包机</div>
-                    <div class="s_num">
-                        <span>2032</span>
-                        <span>20台</span>
-                    </div>
-                    <div class="s_apply"><span>1392</span>申请</div>
-                    <div class="s_time">剩余2天</div>
-                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
 
             </div>
         </div>
@@ -95,7 +217,7 @@
         <div class="report">
             <div class="title">
                 <span>报告精选</span>
-                <a href="javaScript:;">查看更多</a>
+                <a href="javaScript:;" class="go">查看更多</a>
             </div>
             <div class="r_content">
                 <ul>
@@ -369,3 +491,41 @@
 </body>
 
 </html>
+<script src="./index.js"></script>
+<script src="./swiper-bundle.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+        autoplay: true,//等同于以下设置
+        autoplay: {
+            delay: 3000,
+            // stopOnLastSlide: false,
+            pauseOnMouseEnter: true,//鼠标以上停止切换
+            disableOnInteraction: false,//操作轮播图之后还能自动切换
+        },
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
+    //鼠标滑过pagination控制swiper切换
+    for (i = 0; i < mySwiper.pagination.bullets.length; i++) {
+        mySwiper.pagination.bullets[i].onmouseover = function () {
+            this.click();
+        };
+    }    
+</script>
