@@ -72,6 +72,13 @@ function show(){
   }
       ul.innerHTML=str
 }
+var more=document.getElementsByClassName('more')[0]
+var img_more=document.getElementsByClassName('img_more')[0]
+var on=document.getElementById('on')
+on.onclick=function(){
+  img_more.src='http://127.0.0.1:5500/2204-03-jiguo/img/loading-icon.gif'
+  setTimeout(show,2000)
+}
 // window.onscroll = function () {
 //   // 窗口高度
 //   var winHeight =
@@ -83,7 +90,7 @@ function show(){
 //   var scrollH =
 //     document.documentElement.scrollHeight || document.body.scrollHeight;
 //   if (winHeight + scrollTop >= scrollH) {
-//     setTimeout(show, 500);
+ 
 //   }
 // };
 

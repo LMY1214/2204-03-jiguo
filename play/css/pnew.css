@@ -91,18 +91,20 @@ section .list li .font .font_bottom .right span {
 }
 /*点击加载更多*/
 .more {
+  margin-top: 20px;
   position: relative;
   text-align: center;
 }
-.more a {
-  text-decoration: none;
+.more p {
   color: #FE5431;
   padding-left: 25px;
 }
 .more .img_more {
   position: absolute;
-  top: 6px;
+  top: 5px;
   left: 46.5%;
+  width: 15px;
+  height: 15px;
 }
 button {
   margin-top: 30px;
