@@ -3,3 +3,193 @@
     padding: 0;
     margin: 0;
 }
+
+.flow {
+    width: 100%;
+    height: 110px;
+    background-color: #f0f0f0;
+    position: relative;
+
+    span {
+        width: 40px;
+        font-size: 20px;
+        display: inline-block;
+        height: 60px;
+        padding-left: 11px;
+        border-left: 6px #fe5341 solid;
+        position: absolute;
+        left: 133px;
+        top: 32px;
+    }
+
+    ul {
+        margin-left: 150px;
+
+        li {
+            width: 60px;
+            margin: 0 40px 0 114px;
+            // background-color: aqua;
+            float: left;
+            list-style: none;
+            height: 25px;
+            padding-top: 70px;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #737373;
+
+
+            &:nth-of-type(1) {
+                background: url(../../img/use1.png) no-repeat center 22px;
+                border-bottom: 2px solid #fe5341;
+            }
+
+            &:nth-of-type(2) {
+                background: url(../../img/use2.png) no-repeat center 22px;
+
+            }
+
+            &:nth-of-type(3) {
+                background: url(../../img/use3.png) no-repeat center 22px;
+
+            }
+
+            &:nth-of-type(4) {
+                background: url(../../img/use4.png) no-repeat center 22px;
+
+            }
+
+            &:nth-of-type(5) {
+                background: url(../../img/use5.png) no-repeat center 22px;
+
+            }
+        }
+
+    }
+}
+
+/* 版心 */
+.continer {
+    width: 1000px;
+    margin: 0 auto;
+    // background-color: antiquewhite;
+
+    .have {
+        display: inline-block;
+        font-size: 20px;
+        padding-left: 11px;
+        margin: 45px 0 10px 0;
+        border-left: 6px #fe5341 solid;
+    }
+
+    .product {
+        width: 100%;
+        color: #333;
+        display: flex;
+        margin-bottom: 65px;
+
+        .introduce {
+            width: 70%;
+            // background-color: rgb(109, 109, 186);
+            // padding-top: 35px;
+
+
+            // .have {
+            //     display: inline-block;
+            //     font-size: 20px;
+            //     padding-left: 11px;
+            //     margin: 45px 0 20px 0;
+            //     border-left: 6px #fe5341 solid;
+            // }
+
+            h3 {
+                margin: 15px 0 25px 0;
+
+                &:nth-of-type(1) {
+                    color: rgb(255, 0, 0);
+                }
+            }
+
+
+            img {
+                width: 650px;
+                height: 433px;
+                margin: 20px 0 0 0;
+            }
+
+            h4 {
+                margin: 25px 0 30px 0;
+                color: rgb(0, 112, 192);
+            }
+
+            .own {
+                color: #0177A7;
+                display: inline-block;
+                margin: 30px 0 20px 0;
+            }
+
+            .red {
+                color: rgb(255, 0, 0);
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .buy {
+        width: 30%;
+        // background-color: chartreuse;
+        color: #a3a3a3;
+
+        .have1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .price {
+            font-size: 40px;
+            color: #fe5341;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #fe5341;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .from {
+            width: 100%;
+            text-align: center;
+
+            font-size: 14px;
+            margin: 10px 0 -5px 0;
+        }
+
+        img {
+            width: 299px;
+            height: 185px;
+
+            &:nth-of-type(2) {
+                height: 135px;
+            }
+        }
+
+        h4 {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+    }
+}

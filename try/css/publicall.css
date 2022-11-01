@@ -3,3 +3,41 @@
   padding: 0;
   margin: 0;
 }
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  margin: 15px 0 20px 0;
+}
+.first {
+  border-bottom: 1px solid #f0f0f0;
+}
+.title {
+  width: 100%;
+  color: #a3a3a3;
+  font-size: 18px;
+}
+.title > div {
+  width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}
+.title > div span {
+  display: inline-block;
+  width: 165px;
+}
+.title > div .on {
+  color: #fe5431;
+  border-bottom: 4px solid #fe5431;
+}
+.title > div .on1 {
+  color: #474747;
+}
+.slideshow_box {
+  width: 100%;
+  background-color: #f7f7f7;
+}
