@@ -1,5 +1,99 @@
 /* 合作 */
-* {
-  padding: 0;
-  margin: 0;
+/* 关于极果 */
+.about {
+  width: 65%;
+  height: 2348px;
+  /* background-color: #fe5341; */
+  margin: 40px auto;
+  position: relative;
+
+}
+
+.about .bg {
+  background: #f3f3f3;
+  padding: 25px 20px;
+  border-radius: 5px;
+}
+
+/* 左边 */
+.about .left {
+  width: 27%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* background-color: aqua; */
+}
+
+.about a {
+  text-decoration: none;
+  color: #535353;
+}
+
+.about .bg h2 {
+  color: #444;
+  font-size: 20px;
+  line-height: 38px;
+  font-weight: 900;
+  padding-left: 18px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.about .left dl {
+  padding: 10px 18px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.about .left dt {
+  font-weight: bold;
+}
+
+.about .left dd {
+  padding-left: 15px;
+}
+
+/* 右边 */
+.about .right {
+  width: 70%;
+
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+}
+
+
+.right .bg h2 {
+  font-size: 20px;
+  line-height: 38px;
+  font-weight: 900;
+  padding-left: 0px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+
+
+.about .about-info {
+  font-size: 16px;
+}
+
+.about .about-info h3 {
+  font-size: 16px;
+  padding: 25px 0 20px;
+  font-weight: bold;
+}
+
+.about .about-info p {
+  line-height: 1.8;
+}
+
+.about .about-info .pad {
+  padding-left: 25px;
+}
+
+.about .about-info h5 {
+  font-size: 20px;
+  padding: 18px 0 16px;
+  font-weight: bold;
+  color: #474747;
 }
