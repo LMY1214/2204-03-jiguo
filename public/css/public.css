@@ -3,3 +3,143 @@
   padding: 0;
   margin: 0;
 }
+
+header {
+  height: 76px;
+  /* background-color: aqua; */
+  border-bottom: 1px solid #cecfcf;
+  box-shadow: 0 0 5px #cecfcf inset;
+
+}
+
+header .box {
+  width: 100%;
+  height: 76px;
+  margin: 0 auto;
+
+}
+
+header .box .logo {
+  /* background-color: blueviolet; */
+  width: 65%;
+  height: 76px;
+  margin: 0 auto;
+  padding-top: 13px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+header .box a {
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+}
+
+header .box ul {
+  /* background-color: #fe5341; */
+  position: absolute;
+  left: 165px;
+  top: 26px;
+  float: right;
+
+}
+
+.box ul li {
+  font-size: 20px;
+  list-style: none;
+  padding: 0 28px;
+  float: left;
+
+}
+
+.box ul .on a {
+  color: #fe5341;
+}
+
+.box ul li a:hover {
+  color: #fe5341;
+}
+
+header .box .login {
+  color: #fe5341;
+  transition: all 0.15s linear;
+  margin-top: 11px;
+  font-size: 16px;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 3px;
+  float: right;
+  border: 1px #fe5341 solid;
+}
+
+
+header .login:hover {
+  background: #fe5341;
+  color: #fff;
+}
+
+header .box .search {
+  transition: transform 0.08s ease;
+  width: 42px;
+  height: 40px;
+  position: absolute;
+  top: 28px;
+  right: 80px;
+  background: url(img/search.png) no-repeat;
+}
+
+/* 底部 */
+footer {
+  height: 293px;
+  margin-top: 40px;
+  background: #505050;
+  color: #a3a3a3;
+  padding: 40px 0 15px;
+
+}
+
+footer .wrap {
+  height: 300px;
+  width: 65%;
+  margin: 0 auto;
+  /* background-color: #cb662c; */
+
+}
+
+footer .nr {
+  height: 200px;
+  width: 100%;
+  /* background-color: chartreuse; */
+}
+
+footer a {
+  text-decoration: none;
+  color: #a3a3a3;
+}
+
+footer dl {
+  float: left;
+  font-size: 13px;
+  padding-left: 22px;
+  line-height: 20px;
+}
+
+footer dl:nth-child(2) dd {
+  width: 140px;
+  padding-bottom: 10px;
+}
+
+footer dl dt {
+  color: #fff;
+  font-size: 16px;
+  padding-bottom: 20px;
+  vertical-align: baseline;
+  background: transparent
+}
+
+.copy {
+  text-align: center;
+  padding-top: 80px;
+  font-size: 13px;
+}
