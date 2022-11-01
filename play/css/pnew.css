@@ -3,3 +3,109 @@
   padding: 0;
   margin: 0;
 }
+/* 发现酷玩 */
+.show_play {
+  height: 160px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  text-align: center;
+}
+.show_play h1 {
+  margin-top: 35px;
+  font-size: 40px;
+}
+.show_play .title {
+  margin-top: 40px;
+}
+.show_play .title a {
+  text-decoration: none;
+  color: #A9A9A9;
+  display: inline-block;
+  width: 165px;
+  font-size: 18px;
+}
+.show_play .title > a:nth-of-type(1) {
+  color: #FE5431;
+  border-bottom: 4px #fe5431 solid;
+  padding-bottom: 4px;
+}
+/* 主题部分  渲染*/
+section {
+  width: 100%;
+  background-color: #F7F7F7;
+}
+section .list {
+  width: 65%;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section .list li {
+  width: 220px;
+  height: 270px;
+  line-height: 21px;
+  margin-top: 20px;
+  border: 1px solid #e6e9e9;
+  border-radius: 6px;
+}
+section .list li a {
+  text-decoration: none;
+  color: #474747;
+}
+section .list li .font {
+  padding: 7px 10px 10px;
+}
+section .list li .font > span {
+  color: #A9A9A9;
+  display: inline-block;
+  font-size: 12px;
+}
+section .list li .font .font_bottom {
+  margin-top: 10px;
+}
+section .list li .font .font_bottom .left {
+  color: #FE5431;
+}
+section .list li .font .font_bottom .right {
+  float: right;
+  position: relative;
+}
+section .list li .font .font_bottom .right .img1 {
+  position: absolute;
+  top: 6px;
+  right: 43px;
+}
+section .list li .font .font_bottom .right .img2 {
+  position: absolute;
+  top: 6px;
+  right: 13px;
+}
+section .list li .font .font_bottom .right span {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 14px;
+  margin-left: 3px;
+  color: #A9A9A9;
+}
+/*点击加载更多*/
+.more {
+  position: relative;
+  text-align: center;
+}
+.more a {
+  text-decoration: none;
+  color: #FE5431;
+  padding-left: 25px;
+}
+.more .img_more {
+  position: absolute;
+  top: 6px;
+  left: 46.5%;
+}
+button {
+  margin-top: 30px;
+  height: 30px;
+  width: 400px;
+}
