@@ -47,3 +47,29 @@ function countDown() {
     }
 
 }
+
+// 点击返回顶部
+var clickTop = document.getElementsByClassName('clickTop')[0];
+var height;
+var scrollHeight;
+window.onscroll = function () {
+    height = document.documentElement.clientHeight;
+    scrollHeight = document.documentElement.scrollTop;
+    if (scrollHeight >= height) {
+        clickTop.style.display = 'block';
+    } else {
+        clickTop.style.display = 'none';
+
+    }
+}
+clickTop.onclick = function () {
+    var timer;
+    timer = setInterval(function () {
+        var top2 = document.documentElement.scrollTop;
+        speed = (-top2 / 7);
+        document.documentElement.scrollTop = top2 + speed;
+        if (top2 == 0) {
+            clearInterval(timer);
+        }
+    }, 20);
+}
