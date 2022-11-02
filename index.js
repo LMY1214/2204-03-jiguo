@@ -73,3 +73,12 @@ clickTop.onclick = function () {
         }
     }, 20);
 }
+// 点赞
+var r_praiselis = document.getElementsByClassName('r_praise');
+for (var item of r_praiselis) {
+    item.onclick = function () {
+        var praiseNum = this.innerHTML;
+        praiseNum++;
+        this.innerHTML = praiseNum;
+    }
+}

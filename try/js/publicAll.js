@@ -3,7 +3,6 @@
 // var spans = first.children[0].children
 // var second = document.getElementsByClassName('second')[0];
 // var spans1 = second.children[0].children
-
 // for (var i = 0; i < spans.length; i++) {
 //     spans[i].setAttribute('index', i)
 // }
@@ -24,7 +23,6 @@
 //             index1_ = j;
 //         }
 //     }
-
 //     // 一级标题点击变红
 //     for (var item of spans) {
 //         item.onclick = function () {
@@ -98,7 +96,6 @@
 
 
 // 请求数据
-
 var datalis = [];
 var loadimg = document.getElementsByClassName('load')[0].children[0];
 ajaxfn()
@@ -146,7 +143,7 @@ function show(a) {
         } else {
             str += `
             <div>
-            <em id="sign">${item.info_ty}</em>
+            <em class="sign">${item.info_ty}</em>
             <img src="${item.img}">
             <div class="describe">${item.text}</div>
             <div class="s_num">
@@ -162,6 +159,27 @@ function show(a) {
     }
     var s_content = document.getElementsByClassName('s_content')[0];
     s_content.innerHTML = str;
+    // 体验师专享下边边框是绿色
+    var signlis = document.getElementsByClassName('sign');
+    for (var item of signlis) {
+        // console.log(item);
+        var spans = item.nextElementSibling.nextElementSibling.nextElementSibling.children;
+        for (var item1 of spans) {
+            // console.log(item1);
+            item1.style.borderColor = '#80c269';
+            item1.style.color = '#80c269';
+        }
+        var span1 = item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+        span1.style.color = '#80c269';
+        span1.innerHTML = '查看试用名单'
+    }
+    // 点击跳转详情页
+    var s_contents = document.getElementsByClassName('s_content')[0].children;
+    for (var item1 of s_contents) {
+        item1.onclick = function () {
+            window.location.href = './tryDetail.html'
+        }
+    }
 }
 // 点击加载更多
 var load = document.getElementsByClassName('load')[0];
@@ -171,5 +189,3 @@ load.onclick = function () {
     setTimeout(ajaxfn, 2000);
 
 }
-
-

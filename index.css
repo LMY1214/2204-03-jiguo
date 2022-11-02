@@ -214,7 +214,7 @@ img:hover {
   font-size: 12px;
   border-radius: 0 5px 0 5px;
 }
-.continer .slideshow .s_content #sign {
+.continer .slideshow .s_content .sign {
   background-color: #fbf4cb;
   color: #c4a96a;
 }
