@@ -183,9 +183,13 @@ function show(a) {
 }
 // 点击加载更多
 var load = document.getElementsByClassName('load')[0];
+var flgg = true;
 load.onclick = function () {
     loadimg.src = './../img/loading-icon.gif'
-    //    setti show(datalis)
-    setTimeout(ajaxfn, 2000);
+    if (flgg) {
+        setTimeout(ajaxfn, 2000);
+        flgg = false;
 
+    } else {
+    }
 }
