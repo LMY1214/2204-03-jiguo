@@ -34,14 +34,14 @@ function countDown() {
     var mistimingTime = goTime - nowTime;
     var day1 = parseInt(mistimingTime / 1000 / 60 / 60 % 24);
     var day = fn(parseInt(mistimingTime / 1000 / 60 / 60 % 24));
-    var sh = parseInt(mistimingTime / 1000 / 60 % 60);
+    var sh1 = parseInt(mistimingTime / 1000 / 60 % 60);
     var sh = fn(parseInt(mistimingTime / 1000 / 60 % 60));
     var m1 = parseInt(mistimingTime / 1000 % 60);
     var m = fn(parseInt(mistimingTime / 1000 % 60));
     var str = day + '天' + sh + '小时' + m + '分钟';
     var time = document.getElementsByClassName('time')[0];
     time.innerHTML = str;
-    if (day1 <= 0 && sh1 <= 0 && m1 <= 0 && s1 <= 0) {
+    if (day1 <= 0 && sh1 <= 0 && m1 <= 0) {
         var timebig = document.getElementsByClassName('timebig')[0];
         timebig.innerHTML = '申请已结束'
     }
@@ -139,9 +139,17 @@ function show(a) {
     // 点赞
     var r_praiselis = document.getElementsByClassName('r_praise');
     for (var item of r_praiselis) {
+        var flgclick = true;
         item.onclick = function () {
+            console.log('kk');
             var praiseNum = this.innerHTML;
-            praiseNum++;
+            if (flgclick) {
+                praiseNum++;
+                flgclick = false;
+            } else {
+                praiseNum--;
+                flgclick = true;
+            }
             this.innerHTML = praiseNum;
         }
     }
