@@ -67,6 +67,7 @@
   width: 100%;
   color: #333;
   display: flex;
+  justify-content: space-between;
   margin-bottom: 65px;
 }
 .continer .product .introduce {
@@ -97,7 +98,7 @@
   margin-bottom: 0;
 }
 .continer .buy {
-  width: 30%;
+  width: 28%;
   color: #a3a3a3;
 }
 .continer .buy .have1 {
