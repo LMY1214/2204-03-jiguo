@@ -145,6 +145,10 @@ footer dl dt {
   background: transparent
 }
 
+footer dl dt a {
+  color: #fff;
+}
+
 footer dl .free a {
   color: #fff;
 }

@@ -33,39 +33,36 @@ function show(a) {
         }
         item.info_ty = '体验师专享';
         // console.log(item.info_ty == undefined);
-        if (item.info_ty == '首发') {
-            str += `
+        str += `
             <div>
-            <em>${item.info_ty}</em>
+            <em class="sign">${item.info_ty}</em>
             <img src="${item.img}">
             <div class="describe">${item.text}</div>
             <div class="s_num">
-                <span>${item.totalnum}</span>
-                <span>${item.num}</span>
+                <span class='green'>${item.totalnum}</span>
+                <span class='green'>${item.num}</span>
             </div>
             <div class="s_apply"><span>${item.apply}</span>申请</div>
-            <div class="s_time">剩余2天</div>
+            <div class="s_time green">查看试用名单</div>
         </div>
             `
-        } else {
-            str += `
-            <div>
-            <em id="sign">${item.info_ty}</em>
-            <img src="${item.img}">
-            <div class="describe">${item.text}</div>
-            <div class="s_num">
-                <span>${item.totalnum}</span>
-                <span>${item.num}</span>
-            </div>
-            <div class="s_apply"><span>${item.apply}</span>申请</div>
-            <div class="s_time">剩余2天</div>
-        </div>
-            `
-        }
-
     }
     var s_content = document.getElementsByClassName('s_content')[0];
     s_content.innerHTML = str;
+}
+// 体验师专享下边边框是绿色
+var signlis = document.getElementsByClassName('sign');
+for (var item of signlis) {
+    // console.log(item);
+    var spans = item.nextElementSibling.nextElementSibling.nextElementSibling.children;
+    for (var item1 of spans) {
+        // console.log(item1);
+        item1.style.borderColor = '#80c269';
+        item1.style.color = '#80c269';
+    }
+    var span1 = item.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+    span1.style.color = '#80c269';
+    span1.innerHTML = '查看试用名单'
 }
 // 点击加载更多
 var load = document.getElementsByClassName('load')[0];
