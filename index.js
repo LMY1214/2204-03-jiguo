@@ -73,12 +73,87 @@ clickTop.onclick = function () {
         }
     }, 20);
 }
-// 点赞
-var r_praiselis = document.getElementsByClassName('r_praise');
-for (var item of r_praiselis) {
-    item.onclick = function () {
-        var praiseNum = this.innerHTML;
-        praiseNum++;
-        this.innerHTML = praiseNum;
+// // 点赞
+// var r_praiselis = document.getElementsByClassName('r_praise');
+// for (var item of r_praiselis) {
+//     item.onclick = function () {
+//         var praiseNum = this.innerHTML;
+//         praiseNum++;
+//         this.innerHTML = praiseNum;
+//     }
+// }
+// var r_content = document.getElementsByClassName('hh')[0].children[0];
+// console.log(r_content);
+// 页面请求数据,底部加载页面函数
+var load = document.getElementsByClassName('load')[0];
+var datalis = [];
+var loadimg = document.getElementsByClassName('load')[0].children[0];
+var flggnum = 0;
+ajaxfn()
+function ajaxfn() {
+    var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTT');
+    ajax_.open('get', 'http://127.0.0.1:3000/play/new', true);
+    ajax_.send();
+    ajax_.onreadystatechange = function () {
+        if (ajax_.readyState == 4) {
+            if (ajax_.status == 200) {
+                var datalis = JSON.parse(ajax_.responseText);
+                show(datalis);
+                loadimg.src = './../img/more.png';
+                flggnum++;
+                if (flggnum == 2) {
+                    load.innerHTML = '没有更多了~'
+                }
+            } else {
+                console.log('请求失败');
+            }
+        }
     }
 }
+var str = '';
+function show(a) {
+    for (var item of a[0]) {
+        // console.log(item.img);
+        str += `
+ <li class='hs'>
+ <img src="${item.img}" alt="">
+ <span>${item.text}</span>
+ <div class="circle"></div>
+ <span class="r_name">苏苏</span>
+ <span class="r_praise">${item.like}</span>
+ <span class="r_comment">${item.words}</span>
+</li>
+            `
+    }
+    var r_content = document.getElementsByClassName('hh')[0].children[0];
+    r_content.innerHTML = str;
+    // 点击跳转详情页
+    var lis = document.getElementsByClassName('hs');
+    for (var item1 of lis) {
+        var iteming = item1.children[0];
+        iteming.onclick = function () {
+            console.log(this);
+            window.location.href = './try/tryDetail.html'
+        }
+    }
+    // 点赞
+    var r_praiselis = document.getElementsByClassName('r_praise');
+    for (var item of r_praiselis) {
+        item.onclick = function () {
+            var praiseNum = this.innerHTML;
+            praiseNum++;
+            this.innerHTML = praiseNum;
+        }
+    }
+}
+
+// 点击加载更多
+var flgg = true;
+load.onclick = function () {
+    loadimg.src = './../img/loading-icon.gif'
+    if (flgg) {
+        setTimeout(ajaxfn, 2000);
+        flgg = false;
+    }
+}
+

@@ -258,6 +258,10 @@ img:hover {
   color: #fe5341;
   font-size: 12px;
 }
+.continer .slideshow .s_content div .s_num .green {
+  color: #80c269;
+  border-color: #80c269;
+}
 .continer .slideshow .s_content div .s_apply {
   width: 100%;
   height: 28px;
@@ -285,6 +289,9 @@ img:hover {
   font-size: 14px;
   color: #333;
   color: #fe5341;
+}
+.continer .slideshow .s_content div .green {
+  color: #80c269;
 }
 /*     <!-- 报告精选 --> */
 .report_box {
