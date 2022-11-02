@@ -33,9 +33,6 @@ if(obj.src==red){
   obj.previousElementSibling.innerHTML--;
 }
   }
-//   function fn( than){
-// than.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gnew.html'
-//   }
   var section=document.getElementsByTagName('section')[0]
   var ul=document.createElement('ul')
   ul.className='list'
@@ -67,13 +64,20 @@ function show(){
          </li>
         `;
       }
-  
       ul.innerHTML=str
 }
+
+var index=0
 var more=document.getElementsByClassName('more')[0]
 var img_more=document.getElementsByClassName('img_more')[0]
 var on=document.getElementById('on')
 on.onclick=function(){
   img_more.src='http://127.0.0.1:5500/2204-03-jiguo/img/loading-icon.gif'
+  index++
   setTimeout(getData,2000)
+  if(index>=2){
+   on.innerHTML='数据加载完成~'
+   img_more.src='http://127.0.0.1:5500/2204-03-jiguo/img/more.png'
+
+  }
 }
