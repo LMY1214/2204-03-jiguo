@@ -91,9 +91,9 @@
 //   if(ind>=2){
 //     on.innerHTML='数据加载完成~'
 //     img_more.src='http://127.0.0.1:5500/2204-03-jiguo/img/more.png'
- 
+
 //    }
- 
+
 // }
 // // window.onscroll = function () {
 // //   // 窗口高度
@@ -106,9 +106,20 @@
 // //   var scrollH =
 // //     document.documentElement.scrollHeight || document.body.scrollHeight;
 // //   if (winHeight + scrollTop >= scrollH) {
- 
+
 // //   }
 // // };
+// 登陆成功用户名改变
+var suc = window.localStorage.getItem("succeed");
+var lo = document.getElementsByClassName('login')[0];
+console.log(lo);
+
+if (suc) {
+  lo.innerHTML = window.localStorage.getItem("user")
+  lo.style.borderColor = '#fff'
+  lo.style.fontSize = '14px'
+}
 
 
-    
+
+
