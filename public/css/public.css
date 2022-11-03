@@ -29,11 +29,14 @@ header .box .logo {
   position: relative;
 }
 
+<<<<<<< HEAD
+=======
 header .box .logo img {
   width: 130px;
   height: 50px;
 }
 
+>>>>>>> dev
 header .box a {
   text-decoration: none;
   color: rgb(51, 51, 51);
@@ -91,12 +94,23 @@ header .box .search {
   position: absolute;
   top: 28px;
   right: 80px;
+<<<<<<< HEAD
   background: url(../../img/search.png) no-repeat;
+=======
+<<<<<<< HEAD
+  background: url(img/search.png) no-repeat;
+=======
+  background: url(../../img/search.png) no-repeat;
+>>>>>>> dev
+>>>>>>> 93f79181a6a9ff407b244e2b18d6f442a98cb52f
 }
 
 /* 底部 */
 footer {
+<<<<<<< HEAD
+=======
   width: 100%;
+>>>>>>> dev
   height: 293px;
   margin-top: 40px;
   background: #505050;
@@ -107,7 +121,11 @@ footer {
 
 footer .wrap {
   height: 300px;
+<<<<<<< HEAD
+  width: 65%;
+=======
   width: 80%;
+>>>>>>> dev
   margin: 0 auto;
   /* background-color: #cb662c; */
 
@@ -119,7 +137,10 @@ footer .nr {
   /* background-color: chartreuse; */
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> dev
 footer a {
   text-decoration: none;
   color: #a3a3a3;
@@ -145,10 +166,15 @@ footer dl dt {
   background: transparent
 }
 
+<<<<<<< HEAD
 footer dl dt a {
   color: #fff;
 }
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 93f79181a6a9ff407b244e2b18d6f442a98cb52f
 footer dl .free a {
   color: #fff;
 }
@@ -165,6 +191,7 @@ footer dl dt img {
 
 
 
+>>>>>>> dev
 .copy {
   text-align: center;
   padding-top: 80px;
