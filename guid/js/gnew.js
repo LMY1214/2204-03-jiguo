@@ -1,55 +1,76 @@
 // window.onload=function(){
 //     getData()
 // }
-var dataList=[]
+var dataList = [];
+var img_more = document.getElementsByClassName('img_more')[0];
+var on = document.getElementById('on')
 function getData() {
-    var ajax_ = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP");
-    ajax_.open("get", "http://127.0.0.1:3000/guid/new");
-    ajax_.send();
-    ajax_.onreadystatechange = function () {
-      if (ajax_.readyState == 4) {
-        if (ajax_.status == 200) {
-           data = ajax_.responseText;
-          dataList = JSON.parse(data);
-          show();
-        } else {
-          console.log("加载错误");
-        }
+  var ajax_ = new XMLHttpRequest() || new ActiveXObject("Microsoft.XMLHTTP");
+  ajax_.open("get", "http://127.0.0.1:3000/guid/new");
+  ajax_.send();
+  ajax_.onreadystatechange = function () {
+    if (ajax_.readyState == 4) {
+      if (ajax_.status == 200) {
+        data = ajax_.responseText;
+        dataList = JSON.parse(data);
+        show();
+        img_more.parentNode.removeChild(img_more);
+        on.innerHTML = '数据加载完成~'
+      } else {
+        console.log("加载错误");
       }
-    };
-  }
-  //点击跳转页面
-  function onclickHover(obj){
-obj.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gdetail.html'
-  }
-  //点击爱心加减
-function  onclickImg(obj){
-var red='http://127.0.0.1:5500/2204-03-jiguo/img/xinRedh.png'
-var black='http://127.0.0.1:5500/2204-03-jiguo/img/xinRedo.png'
-var src=obj.src==red?black:red;
-obj.src=src;
-obj.style.width='13px'
-obj.style.hight='13px'
-if(obj.src==red){
-  obj.previousElementSibling.innerHTML++;
-}else{
-  obj.previousElementSibling.innerHTML--;
+    }
+  };
 }
-  }
+//点击跳转页面
+function onclickHover(obj) {
+  obj.href = 'http://127.0.0.1:5500/2204-03-jiguo/guid/gdetail.html'
+}
+//点击爱心加减
+// function onclickImg(obj) {
+//   var red = 'http://127.0.0.1:5500/2204-03-jiguo/img/xinRedh.png'
+//   var black = 'http://127.0.0.1:5500/2204-03-jiguo/img/xinRedo.png'
+//   var src = obj.src == red ? black : red;
+//   obj.src = src;
+//   obj.style.width = '13px'
+//   obj.style.hight = '13px'
+//   if (obj.src == red) {
+//     obj.previousElementSibling.innerHTML++;
+//   } else {
+//     obj.previousElementSibling.innerHTML--;
+//   }
+// }
 //   function fn( than){
 // than.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gnew.html'
 //   }
-  var section=document.getElementsByTagName('section')[0]
-  var ul=document.createElement('ul')
-  ul.className='list'
-  var body=document.getElementsByTagName('body')[0]
+
+var xinFlg = true;
+function onclickImg(obj) {
+  var xinnum = obj.previousElementSibling.innerHTML;
+  if (xinFlg) {
+    xinnum++;
+    xinFlg = false;
+    obj.src = '../img/xinRedh.png'
+    obj.style.width = '12px'
+  } else {
+    xinnum--;
+    xinFlg = true;
+    obj.src = '../img/xinRedo.png'
+    obj.style.width = '12px'
+  }
+  obj.previousElementSibling.innerHTML = xinnum;
+}
+var section = document.getElementsByTagName('section')[0]
+var ul = document.createElement('ul')
+ul.className = 'list'
+var body = document.getElementsByTagName('body')[0]
 section.appendChild(ul)
-function show(){
+function show() {
   var str = "";
-    for (var item of dataList) {
-        console.log(dataList);
-        str +=
-         `
+  for (var item of dataList) {
+    console.log(dataList);
+    str +=
+      `
         <li>
         <a  onclick="onclickHover(this)" >
         <img src="${item.img}" width="220" height="130"  />
@@ -69,24 +90,15 @@ function show(){
         </div>
          </li>
         `;
-      }
-  
-      ul.innerHTML=str
+  }
+
+  ul.innerHTML = str;
+
 }
-var index=0
-var more=document.getElementsByClassName('more')[0]
-var img_more=document.getElementsByClassName('img_more')[0]
-var on=document.getElementById('on')
-on.onclick=function(){
-  img_more.src='http://127.0.0.1:5500/2204-03-jiguo/img/loading-icon.gif'
-  index++
-setTimeout(getData,2000)
-  if(index>=2){
-    on.innerHTML='数据加载完成~'
-    img_more.src='http://127.0.0.1:5500/2204-03-jiguo/img/more.png'
- 
-   }
- 
+on.onclick = function () {
+  img_more.src = '../img/loading-icon.gif'
+  setTimeout(getData, 2000)
+
 }
 // window.onscroll = function () {
 //   // 窗口高度
@@ -102,6 +114,16 @@ setTimeout(getData,2000)
 //  show()
 //   }
 // };
+// 登陆成功用户名改变
+var suc = window.localStorage.getItem("succeed");
+var lo = document.getElementsByClassName('login')[0];
+console.log(lo);
+
+if (suc) {
+  lo.innerHTML = window.localStorage.getItem("user")
+  lo.style.borderColor = '#fff'
+  lo.style.fontSize = '14px'
+}
 
 
-    
+

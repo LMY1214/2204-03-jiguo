@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-console.log('注册');
-=======
+
 // 注册页功能
 
 var input_tel = document.getElementsByClassName("tel")[0];
@@ -238,10 +236,9 @@ btn_.onclick = function () {
         window.localStorage.setItem("user", input_user.value);
         setTimeout(function () {
             // console.log('11');
-            window.location.href = '../../../2204-03-jiguo/login/login.html'
+            window.location.href = '../../login/login.html'
         }, 1000);
     } else {
         alert("注册失败");
     }
 };
->>>>>>> 93f79181a6a9ff407b244e2b18d6f442a98cb52f

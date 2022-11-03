@@ -54,11 +54,11 @@ btn.addEventListener("click", function () {
     if (loginTel.value == telLocalStorage &&
         conFirmPws.value == pwdLocalStorage) {
         alert("登录成功");
-        // window.location.href = "../../../2204-03-jiguo/index.html"
+        window.location.href = "../../index.html"
         window.localStorage.setItem("check", check.checked);
         window.localStorage.setItem("succeed", true);
-        setCookie('user', loginTel.value)
-        setCookie('登录', 'ture')
+        window.localStorage.setItem('user', loginTel.value)
+        window.localStorage.setItem('登录', 'ture')
         // console.log(loginTel.value);
 
     } else {
