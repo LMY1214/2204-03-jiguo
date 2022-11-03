@@ -1,5 +1,5 @@
 /* 报告-最新 */
-/* 报告-最新 */
+
 * {
   padding: 0;
   margin: 0;
@@ -48,7 +48,7 @@ body {
 
 .report {
   width: 1000px;
-  height: 2547px;
+  /* height: 2547px; */
   padding-top: 25px;
   /* background-color: aquamarine; */
   margin: 0 auto;
@@ -61,6 +61,7 @@ body {
 
 .listinfo ul {
   list-style: none;
+  overflow: hidden;
 }
 
 .left {
@@ -68,6 +69,7 @@ body {
 }
 
 .listinfo li {
+  /* height: 500px; */
   border-radius: 6px;
   border: 1px solid #e6e9e9;
   margin-bottom: 13px;
