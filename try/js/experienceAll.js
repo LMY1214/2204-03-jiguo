@@ -76,9 +76,10 @@ function jump() {
 // 渲染数据
 
 // 请求数据
-
+var load = document.getElementsByClassName('load')[0];
 var datalis = [];
 var loadimg = document.getElementsByClassName('load')[0].children[0];
+var flggnum = 0;
 ajaxfn()
 function ajaxfn() {
     var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTT');
@@ -90,7 +91,11 @@ function ajaxfn() {
                 var data = JSON.parse(ajax_.responseText);
                 datalis = data;
                 show(datalis);
-                loadimg.src = './../img/more.png'
+                loadimg.src = './../img/more.png';
+                flggnum++;
+                if (flggnum == 2) {
+                    load.innerHTML = '没有更多了~'
+                }
             } else {
                 console.log('请求失败');
             }
