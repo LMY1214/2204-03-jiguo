@@ -165,3 +165,47 @@ load.onclick = function () {
     }
 }
 
+// 登录成功后 注册变用户名
+// - setCookie()——创建Cookie
+
+function setCookie(key, val, time) {
+    var date = new Date();
+    date.setDate(date.getDate() + time);
+    document.cookie = `${key}=${val};expires=${date}`;
+}
+
+
+// - getCookie()——获取Cookie
+function getCookie(key) {
+    var arry = document.cookie.split('; ');
+    for (var item of arry) {
+        var newArry = item.split('=');
+        if (newArry[0] == key) {
+            return newArry[1]
+        }
+    }
+}
+// - removeCookie()——删除Cookie
+function removeCookie(key_) {
+    this.setCookie(key_, '', -1);
+}
+
+
+// 清空cookie
+function clearCookie() {
+    var arry = document.cookie.split('; ');
+    for (var item of arry) {
+        var newArry = item.split('=');
+        console.log(newArry[0]);
+        this.removeCookie(newArry[0]);
+    }
+}
+// setCookie('登录1', '11')
+// console.log(getCookie('登录'));
+var tel = getCookie(user);
+if (tel == 'loginTel.value') {
+
+}
+
+
+
