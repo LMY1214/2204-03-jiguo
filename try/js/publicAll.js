@@ -12,18 +12,6 @@ for (var j = 0; j < spans1.length; j++) {
 }
 var index_ = '0';
 var index1_ = '0';
-// window.onload = function () {
-// for (var i = 0; i < spans.length; i++) {
-//     if (spans[i].className != '') {
-//         index_ = i;
-//     }
-// }
-// // console.log(index_);
-// for (var j = 0; j < spans1.length; j++) {
-//     if (spans1[j].className != '') {
-//         index1_ = j;
-//     }
-// }
 // 一级标题点击变红
 for (var item of spans) {
     item.onclick = function () {
@@ -45,24 +33,9 @@ for (var item1 of spans1) {
         index1_ = this.getAttribute('index1')
         this.className = 'on1'
         jump()
-        // console.log(index_ == 0 && index1_ == 0);
-        // var one = index_ == 0 && index1_ == 0;
-        // console.log(one);
-        // if (one) {
-        //     console.log(index_);
-        //     console.log(index1_);
-        // }
     }
 }
 
-// if (index_ == 0 && index1_ == 0) {
-//     window.location.href = '././publicAll.html'
-//     console.log(index_);
-//     console.log(index1_);
-// } else {
-//     console.log('ll');
-// }
-// jump()
 function jump() {
 
     if (index_ == 0 && index1_ == 0) {
@@ -98,7 +71,6 @@ function jump() {
         console.log(index_, index1_);
     }
 }
-// }
 
 
 

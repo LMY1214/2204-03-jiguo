@@ -1,4 +1,78 @@
 console.log('试用-体验师-全部');
+var first = document.getElementsByClassName('first')[0];
+var spans = first.children[0].children;
+var second = document.getElementsByClassName('second')[0];
+var spans1 = second.children[0].children;
+for (var i = 0; i < spans.length; i++) {
+    spans[i].setAttribute('index', i)
+}
+for (var j = 0; j < spans1.length; j++) {
+    spans1[j].setAttribute('index1', j)
+}
+var index_ = '0';
+var index1_ = '0';
+// 一级标题点击变红
+for (var item of spans) {
+    item.onclick = function () {
+        for (var i = 0; i < spans.length; i++) {
+            spans[i].className = ''
+        }
+        index_ = this.getAttribute('index')
+        this.className = 'on';
+        jump()
+    }
+}
+// 二级标题点击变黑
+for (var item1 of spans1) {
+    // var flg1 = item1.className != '';
+    item1.onclick = function () {
+        for (var j = 0; j < spans1.length; j++) {
+            spans1[j].className = ''
+        }
+        index1_ = this.getAttribute('index1')
+        this.className = 'on1'
+        jump()
+    }
+}
+
+function jump() {
+
+    if (index_ == 0 && index1_ == 0) {
+        window.location.href = '././publicAll.html';
+        console.log(index_, index1_);
+
+    } else if (index_ == 0 && index1_ == 1) {
+        window.location.href = '././publicApplying.html';
+        console.log(index_, index1_);
+
+    } else if (index_ == 0 && index1_ == 2) {
+        window.location.href = '././publicFeel.html';
+        console.log(index_, index1_);
+
+    } else if (index_ == 0 && index1_ == 3) {
+        window.location.href = '././publicEnd.html';
+        console.log(index_, index1_);
+
+    } else if (index_ == 1 && index1_ == 0) {
+        window.location.href = '././experienceAll.html';
+        console.log(index_, index1_);
+
+    } else if (index_ == 1 && index1_ == 1) {
+        window.location.href = '././experienceApplying.html';
+        console.log(index_, index1_);
+
+    } else if (index_ == 1 && index1_ == 2) {
+        window.location.href = '././experienceFeel.html';
+        console.log(index_, index1_);
+
+    } else if (index_ == 1 && index1_ == 3) {
+        window.location.href = '././experienceEnd.html';
+        console.log(index_, index1_);
+    }
+}
+
+
+
 // 渲染数据
 
 // 请求数据
@@ -49,6 +123,15 @@ function show(a) {
     }
     var s_content = document.getElementsByClassName('s_content')[0];
     s_content.innerHTML = str;
+    // 点击跳转详情页
+    var s_contents = document.getElementsByClassName('s_content')[0].children;
+    console.log(s_contents);
+    for (var item1 of s_contents) {
+        item1.onclick = function () {
+            console.log(this);
+            window.location.href = './tryDetail.html'
+        }
+    }
 }
 // 体验师专享下边边框是绿色
 var signlis = document.getElementsByClassName('sign');
@@ -64,6 +147,7 @@ for (var item of signlis) {
     span1.style.color = '#80c269';
     span1.innerHTML = '查看试用名单'
 }
+
 // 点击加载更多
 var load = document.getElementsByClassName('load')[0];
 var flgg = true;
