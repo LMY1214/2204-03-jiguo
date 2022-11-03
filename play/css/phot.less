@@ -1,5 +1,134 @@
 /* 酷玩最热 */
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* 发现酷玩 */
+.show_play {
+  height: 160px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  text-align: center;
+
+  h1 {
+    margin-top: 35px;
+    font-size: 40px;
+  }
+
+  .title {
+    margin-top: 40px;
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #A9A9A9;
+      display: inline-block;
+      width: 165px;
+      font-size: 18px;
+    }
+
+    &>a:nth-of-type(2) {
+      color: #FE5431;
+      border-bottom: 4px #fe5431 solid;
+      padding-bottom: 4px;
+    }
+  }
+}
+
+/* 主题部分  渲染*/
+.section {
+  width: 100%;
+  background-color: #F7F7F7;
+
+  .list {
+    width: 65%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    li {
+      width: 220px;
+      height: 270px;
+      line-height: 21px;
+      margin-top: 20px;
+      border: 1px solid #e6e9e9;
+      border-radius: 6px;
+
+      a {
+        text-decoration: none;
+        color: #474747;
+      }
+
+      .font {
+
+        padding: 7px 10px 10px;
+
+        &>span {
+          color: #A9A9A9;
+          display: inline-block;
+          font-size: 12px;
+        }
+
+        .font_bottom {
+          margin-top: 10px;
+
+          .left {
+            color: #FE5431;
+          }
+
+          .right {
+            float: right;
+            position: relative;
+
+            .img1 {
+              position: absolute;
+              top: 6px;
+              right: 43px;
+            }
+
+            .img2 {
+              position: absolute;
+              top: 6px;
+              right: 13px;
+            }
+
+            span {
+              display: inline-block;
+              vertical-align: middle;
+              padding-left: 14px;
+              margin-left: 3px;
+              color: #A9A9A9;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+}
+
+/*点击加载更多*/
+.more {
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+
+  p {
+
+    color: #FE5431;
+    padding-left: 25px;
+
+  }
+
+  .img_more {
+    position: absolute;
+    top: 5px;
+    left: 46.5%;
+    width: 15px;
+    height: 15px;
+  }
 }

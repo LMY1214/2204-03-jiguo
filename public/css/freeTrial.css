@@ -1,5 +1,15 @@
 /* 免费试用 */
-* {
-  padding: 0;
-  margin: 0;
+.about {
+  width: 65%;
+  height: 1006px;
+  /* background-color: #fe5341; */
+  margin: 40px auto;
+  position: relative;
+
+}
+
+.about .bg {
+  background: #f3f3f3;
+  padding: 25px 30px;
+  border-radius: 5px;
 }
