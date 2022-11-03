@@ -76,6 +76,9 @@ header .box .login {
   border-radius: 3px;
   float: right;
   border: 1px #fe5341 solid;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 

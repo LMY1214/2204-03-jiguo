@@ -19,23 +19,27 @@ function getData() {
     };
   }
   //点击跳转页面
-  function onclickHover(obj){
-obj.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gnew.html'
-  }
+//   function onclickHover(obj){
+// // obj.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gnew.html'
+// obj.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gnew.html'
+//   }
+
   //点击爱心加减
-function  onclickImg(obj){
-var red='http://127.0.0.1:5500/2204-03-jiguo/img/xinRedh.png'
-var black='http://127.0.0.1:5500/2204-03-jiguo/img/xinRedo.png'
-var src=obj.src==red?black:red;
-obj.src=src;
-obj.style.width='13px'
-obj.style.hight='13px'
-if(obj.src==red){
-  obj.previousElementSibling.innerHTML++;
-}else{
-  obj.previousElementSibling.innerHTML--;
-}
-  }
+// function  onclickImg(obj){
+// var red='http://127.0.0.1:5500/2204-03-jiguo/img/xinRedh.png'
+// var black='http://127.0.0.1:5500/2204-03-jiguo/img/xinRedo.png'
+// var src=obj.src==red?black:red;
+// obj.src=src;
+// obj.style.width='13px'
+// obj.style.hight='13px'
+// if(obj.src==red){
+//   obj.previousElementSibling.innerHTML++;
+// }else{
+//   obj.previousElementSibling.innerHTML--;
+// }
+//   }
+
+
   var ul=document.getElementsByClassName('list')[0]
   var index=-1;
   var flg=true
@@ -51,7 +55,7 @@ function show(){
          `
         <li>
         <a  onclick="onclickHover(this)" >
-        <img src="${item.img}" width="220" height="130"  />
+        <img src="${item.img}" width="220" height="130" class="detail" />
         </a>
         <div class="font">
           <p>${item.text}</p>
@@ -70,7 +74,34 @@ function show(){
         `;
       }
   }
-      ul.innerHTML=str
+      ul.innerHTML=str;
+       // 点击跳转详情页
+       var detail = document.getElementsByClassName('detail');
+       for (var item1 of detail) {
+           item1.onclick = function () {
+               window.location.href = '../../guid/gdetail.html'
+           }
+       }
+         //点击爱心加减
+         var xinFlg=true;
+         var imglis = document.getElementsByClassName('img1');
+         for (var item1 of imglis) {
+             item1.onclick = function () {
+              var xinnum=this.previousElementSibling.innerHTML;
+            if(xinFlg){
+              xinnum++;
+              xinFlg=false;
+              this.src='../img/xinRedh.png'
+              this.style.width='12px'
+            }else{
+              xinnum--;
+              xinFlg=true;
+              this.src='../img/xinRedo.png'
+              this.style.width='12px'
+            }
+             this.previousElementSibling.innerHTML=xinnum
+             }
+         }
 }
 var ind=0
 var more=document.getElementsByClassName('more')[0]
@@ -87,6 +118,11 @@ on.onclick=function(){
    }
  
 }
+// on.onclick = function () {
+//   img_more.src = '../img/loading-icon.gif'
+//   setTimeout(show, 2000)
+
+// }
 // window.onscroll = function () {
 //   // 窗口高度
 //   var winHeight =

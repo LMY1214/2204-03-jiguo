@@ -235,7 +235,7 @@ btn_.onclick = function () {
         window.localStorage.setItem("user", input_user.value);
         setTimeout(function () {
             // console.log('11');
-            window.location.href = '../../../2204-03-jiguo/login/login.html'
+            window.location.href = '../../login/login.html'
         }, 1000);
     } else {
         alert("注册失败");
