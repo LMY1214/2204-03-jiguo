@@ -29,11 +29,11 @@
   padding-bottom: 4px;
 }
 /* 主题部分  渲染*/
-section {
+.section {
   width: 100%;
   background-color: #F7F7F7;
 }
-section .list {
+.section .list {
   width: 65%;
   margin: 0 auto;
   list-style: none;
@@ -41,7 +41,7 @@ section .list {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-section .list li {
+.section .list li {
   position: relative;
   width: 220px;
   height: 230px;
@@ -52,45 +52,45 @@ section .list li {
   background: url(../../img/listbg.jpg) no-repeat left bottom;
   background-size: 221px 19px;
 }
-section .list li a {
+.section .list li a {
   text-decoration: none;
   color: #474747;
 }
-section .list li .font {
+.section .list li .font {
   padding: 7px 10px 10px;
 }
-section .list li .font p {
+.section .list li .font p {
   font-size: 14px;
 }
-section .list li .font > span {
+.section .list li .font > span {
   color: #A9A9A9;
   display: inline-block;
   font-size: 12px;
 }
-section .list li .font .font_bottom {
+.section .list li .font .font_bottom {
   position: absolute;
   bottom: 18px;
   right: 1px;
   margin-top: 10px;
 }
-section .list li .font .font_bottom .left {
+.section .list li .font .font_bottom .left {
   color: #FE5431;
 }
-section .list li .font .font_bottom .right {
+.section .list li .font .font_bottom .right {
   float: right;
   position: relative;
 }
-section .list li .font .font_bottom .right .img1 {
+.section .list li .font .font_bottom .right .img1 {
   position: absolute;
   top: 6px;
   right: 39px;
 }
-section .list li .font .font_bottom .right .img2 {
+.section .list li .font .font_bottom .right .img2 {
   position: absolute;
   top: 6px;
   right: 12px;
 }
-section .list li .font .font_bottom .right span {
+.section .list li .font .font_bottom .right span {
   font-size: 12px;
   display: inline-block;
   vertical-align: middle;

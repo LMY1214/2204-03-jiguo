@@ -30,19 +30,19 @@
   padding-bottom: 4px;
 }
 /* section  */
-section {
+.section {
   background-color: #F7F7F7;
   margin-top: 20px;
   overflow: hidden;
 }
-section .life {
+.section .life {
   background-color: #fff;
   width: 60%;
   margin: 0 auto;
   margin-top: 20px;
   color: #ACA3AC;
 }
-section .life h5 {
+.section .life h5 {
   font-weight: 300;
   font-size: 18px;
   color: black;
@@ -50,36 +50,36 @@ section .life h5 {
   line-height: 60px;
   margin-left: 30px;
 }
-section .life .top {
+.section .life .top {
   border-bottom: 1px dashed grey;
   list-style: none;
   overflow: hidden;
 }
-section .life .top li {
+.section .life .top li {
   float: left;
   margin-left: 40px;
   margin-bottom: 20px;
 }
-section .life .top li p {
+.section .life .top li p {
   margin-top: 10px;
 }
-section .life .top li p:hover {
+.section .life .top li p:hover {
   color: #FE5431;
 }
-section .life_bottom {
+.section .life_bottom {
   margin-top: 20px;
   overflow: hidden;
 }
-section .life_bottom p {
+.section .life_bottom p {
   margin-left: 15px;
   margin-bottom: 30px;
 }
-section .life_bottom p span {
+.section .life_bottom p span {
   margin-left: 35px;
 }
-section .life_bottom p span:hover {
+.section .life_bottom p span:hover {
   color: #FE5431;
 }
-section .life_bottom > p:nth-of-type(3) {
+.section .life_bottom > p:nth-of-type(3) {
   margin-bottom: 20px;
 }
