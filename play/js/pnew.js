@@ -72,12 +72,20 @@ function show(){
   }
       ul.innerHTML=str
 }
+var ind=0
 var more=document.getElementsByClassName('more')[0]
 var img_more=document.getElementsByClassName('img_more')[0]
 var on=document.getElementById('on')
 on.onclick=function(){
   img_more.src='http://127.0.0.1:5500/2204-03-jiguo/img/loading-icon.gif'
   setTimeout(show,2000)
+  ind++
+  if(ind>=2){
+    on.innerHTML='数据加载完成~'
+    img_more.src='http://127.0.0.1:5500/2204-03-jiguo/img/more.png'
+ 
+   }
+ 
 }
 // window.onscroll = function () {
 //   // 窗口高度
