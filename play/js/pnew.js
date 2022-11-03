@@ -44,6 +44,11 @@ var ul = document.getElementsByClassName('list')[0]
 var index = -1;
 var flg = true
 function show() {
+  if (moreflg) {
+    on.innerHTML = '数据加载完成~'
+    img_more.parentNode.removeChild(img_more);
+
+  }
   index += 2;
   var str = "";
   for (var i = 0; i <= index; i++) {
@@ -106,16 +111,17 @@ function show() {
 var ind = 0
 var more = document.getElementsByClassName('more')[0]
 var img_more = document.getElementsByClassName('img_more')[0]
-var on = document.getElementById('on')
+var on = document.getElementById('on');
+var moreflg = false;
 on.onclick = function () {
-  img_more.src = 'http://127.0.0.1:5500/2204-03-jiguo/img/loading-icon.gif'
+  moreflg = true;
+  img_more.src = '../img/loading-icon.gif'
   setTimeout(show, 2000)
   ind++
-  if (ind >= 2) {
-    on.innerHTML = '数据加载完成~'
-    img_more.src = 'http://127.0.0.1:5500/2204-03-jiguo/img/more.png'
-
-  }
+  // if (ind >= 3) {
+  //   on.innerHTML = '数据加载完成~'
+  //   img_more.parentNode.removeChild(img_more)
+  // }
 
 }
 // on.onclick = function () {
