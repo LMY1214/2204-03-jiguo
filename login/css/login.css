@@ -1,1 +1,78 @@
 /* 登录 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.reg-box {
+    background: #f7f7f7;
+    padding-bottom: 35px;
+    padding-top: 25px;
+}
+
+.reg {
+    width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border: 1px #d7d7d7 solid;
+}
+
+.reg .title {
+    position: relative;
+    padding: 20px 0 20px 25px;
+    font-size: 20px;
+    color: #474747;
+    line-height: 1.6;
+}
+
+.reg .title:after {
+    background: #fe5341;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 25px;
+    left: 0;
+    top: 24px;
+}
+
+.regform {
+    width: 400px;
+    margin: 50px auto 150px;
+}
+
+.regform p {
+    margin-top: 27px;
+}
+
+.regform a {
+    text-decoration: none;
+}
+
+.regform input {
+    background: #f7f7f7;
+    color: #a3a3a3;
+    height: 50px;
+    padding-left: 10px;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px #eee solid;
+    border-radius: 10px;
+}
+
+.regform p button {
+    background: #fe5341;
+    color: #fff;
+    border: medium none;
+    width: 100%;
+    cursor: pointer;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}

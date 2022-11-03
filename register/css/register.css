@@ -1,5 +1,184 @@
-/* 注册 */
-* {
-  padding: 0;
-  margin: 0;
+/* 正确错误样式 */
+.correct {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+/* 注册页主体 */
+.register {
+  background-color: #f7f7f7;
+  padding-bottom: 35px;
+  padding-top: 25px;
+}
+
+.register .content {
+  background-color: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid #d7d7d7;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0px;
+}
+
+.register .content h2 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 400;
+  height: 25px;
+  padding-left: 30px;
+  line-height: 25px;
+  color: #474747;
+}
+
+.register .content h2::after {
+  background-color: #fe5341;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 6px;
+  height: 25px;
+  left: 0px;
+  top: 0px;
+}
+
+.register .content .inner {
+  width: 360px;
+  margin: 70px auto;
+  position: relative;
+}
+
+.register .content .inner span {
+  width: 200px;
+  height: 55px;
+  position: absolute;
+  left: 398px;
+  top: 77px;
+  line-height: 55px;
+  text-indent: 5px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.register .content .inner span:nth-of-type(1) {
+  top: -3px;
+}
+
+.register .content .inner span:nth-of-type(3) {
+  top: 153px;
+}
+
+.register .content .inner span:nth-of-type(4) {
+  top: 230px;
+}
+
+.register .content .inner span:nth-of-type(5) {
+  top: 309px;
+}
+
+.register .content .inner span:nth-of-type(6) {
+  top: 387px;
+}
+
+.register .content .inner img {
+  position: absolute;
+  top: 84px;
+  right: -30px;
+}
+
+.register .content .inner .item {
+  width: 350px;
+  margin: 0 auto;
+  position: relative;
+  height: 18px;
+  margin-bottom: 30px;
+  padding: 14px 18px;
+  background-color: #f7f7f7;
+  border: 1px solid #eeeeee;
+  line-height: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.register .content .inner .item input {
+  width: 335px;
+  height: 18px;
+  border: none;
+  line-height: 18px;
+  vertical-align: middle;
+  outline: none;
+  color: #757575;
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+
+.register .content .inner .item:nth-of-type(2) {
+  width: 200px;
+  float: left;
+}
+
+.register .content .inner .item:nth-of-type(3) {
+  width: 200px;
+  float: left;
+}
+
+.register .content .inner .item1 {
+  width: 350px !important;
+}
+
+.register .content .inner .code {
+  width: 120px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid #a3a3a3;
+  float: right;
+  border-radius: 10px;
+  color: #a3a3a3;
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  top: 155px;
+  right: -26px;
+}
+
+.register .content .inner .btn {
+  width: 385px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fe5341;
+  color: #fff5f8;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.register .content .inner .remember {
+  width: 385px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  color: #5a5a5a;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.register .content .inner .remember input {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.register .content .inner .remember label {
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.register .content .inner .remember a {
+  float: right;
+  color: #5a5a5a;
 }
