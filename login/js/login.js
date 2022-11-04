@@ -53,7 +53,7 @@ btn.addEventListener("click", function () {
     if (loginTel.value == telLocalStorage &&
         conFirmPws.value == pwdLocalStorage) {
         alert("登录成功");
-        window.location.href = "../../index.html"
+        window.location.href = "../index.html"
         window.localStorage.setItem("check", check.checked);
         window.localStorage.setItem("succeed", true);
         window.localStorage.setItem('user', loginTel.value)
