@@ -94,16 +94,8 @@ header .box .search {
   position: absolute;
   top: 28px;
   right: 80px;
-
   background: url(../../img/search.png) no-repeat;
 
-  background: url(img/search.png) no-repeat;
-
-  background: url(../../img/search.png) no-repeat;
-
-  background: url(../../img/search.png) no-repeat;
-
-  background: url(img/search.png) no-repeat;
 }
 
 /* 底部 */
@@ -118,7 +110,7 @@ footer {
 
 footer .wrap {
   height: 300px;
-  width: 80%;
+  width: 1000px;
   margin: 0 auto;
   /* background-color: #cb662c; */
 

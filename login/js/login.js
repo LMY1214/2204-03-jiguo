@@ -30,7 +30,6 @@ function clearCookie() {
     var arry = document.cookie.split('; ');
     for (var item of arry) {
         var newArry = item.split('=');
-        console.log(newArry[0]);
         this.removeCookie(newArry[0]);
     }
 }
@@ -59,7 +58,6 @@ btn.addEventListener("click", function () {
         window.localStorage.setItem("succeed", true);
         window.localStorage.setItem('user', loginTel.value)
         window.localStorage.setItem('登录', 'ture')
-        // console.log(loginTel.value);
 
     } else {
         alert("用户名/密码输入错误");

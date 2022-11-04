@@ -38,35 +38,27 @@ function jump() {
 
     if (index_ == 0 && index1_ == 0) {
         window.location.href = '././publicAll.html';
-        console.log(index_, index1_);
 
     } else if (index_ == 0 && index1_ == 1) {
         window.location.href = '././publicApplying.html';
-        console.log(index_, index1_);
 
     } else if (index_ == 0 && index1_ == 2) {
         window.location.href = '././publicFeel.html';
-        console.log(index_, index1_);
 
     } else if (index_ == 0 && index1_ == 3) {
         window.location.href = '././publicEnd.html';
-        console.log(index_, index1_);
 
     } else if (index_ == 1 && index1_ == 0) {
         window.location.href = '././experienceAll.html';
-        console.log(index_, index1_);
 
     } else if (index_ == 1 && index1_ == 1) {
         window.location.href = '././experienceApplying.html';
-        console.log(index_, index1_);
 
     } else if (index_ == 1 && index1_ == 2) {
         window.location.href = '././experienceFeel.html';
-        console.log(index_, index1_);
 
     } else if (index_ == 1 && index1_ == 3) {
         window.location.href = '././experienceEnd.html';
-        console.log(index_, index1_);
     }
 }
 
@@ -108,7 +100,6 @@ function tryLoading(address) {
                 item.totalnum = '2032';
                 item.num = '20'
             }
-            console.log(item.info_ty == undefined);
             if (item.info_ty == '首发') {
                 str += `
             <div>
@@ -145,10 +136,8 @@ function tryLoading(address) {
         // 体验师专享下边边框是绿色
         var signlis = document.getElementsByClassName('sign');
         for (var item of signlis) {
-            // console.log(item);
             var spans = item.nextElementSibling.nextElementSibling.nextElementSibling.children;
             for (var item1 of spans) {
-                // console.log(item1);
                 item1.style.borderColor = '#80c269';
                 item1.style.color = '#80c269';
             }
@@ -192,7 +181,6 @@ function tryLoading(address) {
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");
 var lo = document.getElementsByClassName('login')[0];
-console.log(lo);
 
 if (suc) {
     lo.innerHTML = window.localStorage.getItem("user")

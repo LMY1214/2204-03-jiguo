@@ -59,7 +59,7 @@ function show() {
       str +=
         `
         <li>
-        <a  onclick="onclickHover(this)" >
+        <a href="../guid/gdetail.html">
         <img src="${item.img}" width="220" height="130" class="detail" />
         </a>
         <div class="font">
@@ -81,13 +81,13 @@ function show() {
   }
   ul.innerHTML = str;
   // 点击跳转详情页
-  var detail = document.getElementsByClassName('detail');
-  for (var item1 of detail) {
-    item1.onclick = function () {
-      // window.location.href = 'http://127.0.0.1:5500/2204-03-jiguo/guid/gdetail.html'
-      location.href = '../../../guid/gdetail.html'
-    }
-  }
+  // var detail = document.getElementsByClassName('detail');
+  // for (var item1 of detail) {
+  //   item1.onclick = function () {
+  //     window.location.href = 'http://127.0.0.1:5500/2204-03-jiguo/guid/gdetail.html'
+  //     // location.href = '../../../guid/gdetail.html'
+  //   }
+  // }
   //点击爱心加减
   var xinFlg = true;
   var imglis = document.getElementsByClassName('img1');
@@ -148,7 +148,7 @@ on.onclick = function () {
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");
 var lo = document.getElementsByClassName('login')[0];
-console.log(lo);
+
 
 if (suc) {
   lo.innerHTML = window.localStorage.getItem("user")
