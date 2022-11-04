@@ -235,7 +235,8 @@ btn_.onclick = function () {
         window.localStorage.setItem("pwd", input_pws.value);
         window.localStorage.setItem("user", input_user.value);
         setTimeout(function () {
-            location.href = '../../login/login.html'
+            location.href = '../../login/login.html';
+            // location.href = 'https://www.baidu.com/';
         }, 1000);
     } else {
         alert("注册失败");
