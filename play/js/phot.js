@@ -112,7 +112,6 @@
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");
 var lo = document.getElementsByClassName('login')[0];
-console.log(lo);
 
 if (suc) {
   lo.innerHTML = window.localStorage.getItem("user")

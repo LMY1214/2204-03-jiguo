@@ -60,15 +60,15 @@ function onclickImg(obj) {
   }
   obj.previousElementSibling.innerHTML = xinnum;
 }
-var section = document.getElementsByTagName('section')[0]
-var ul = document.createElement('ul')
-ul.className = 'list'
-var body = document.getElementsByTagName('body')[0]
-section.appendChild(ul)
+// var section = document.getElementsByTagName('section')[0]
+// var ul = document.createElement('ul')
+// ul.className = 'list'
+// var body = document.getElementsByTagName('body')[0]
+// section.appendChild(ul)
+var ul = document.getElementsByClassName('list')[0];
 function show() {
   var str = "";
   for (var item of dataList) {
-    console.log(dataList);
     str +=
       `
         <li>
@@ -92,7 +92,7 @@ function show() {
         `;
   }
 
-  ul.innerHTML = str;
+  ul.innerHTML += str;
 
 }
 on.onclick = function () {
@@ -117,13 +117,10 @@ on.onclick = function () {
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");
 var lo = document.getElementsByClassName('login')[0];
-console.log(lo);
+
 
 if (suc) {
   lo.innerHTML = window.localStorage.getItem("user")
   lo.style.borderColor = '#fff'
   lo.style.fontSize = '14px'
 }
-
-
-
