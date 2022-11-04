@@ -75,20 +75,6 @@ img {
   width: 220px;
   height: 130px;
   border-radius: 5px 5px 0 0;
-  /*   animation: move 1.7s alternate forwards;
-
-
-        @keyframes move {
-            0% {
-                transform: translate(300px, -500px);
-                ;
-            }
-
-            100% {
-                transform: translate(0px, 0px);
-            }
-        }
- */
 }
 img:hover {
   animation: opa 1s alternate infinite;
@@ -190,11 +176,7 @@ img:hover {
 .continer .slideshow .s_content .swiper {
   width: 1000px;
   height: 297px;
-  /*      display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap; */
   position: relative;
-  /* background-color: #fe5341; */
 }
 .continer .slideshow .s_content .swiper .swiper-button-prev:after {
   position: absolute;

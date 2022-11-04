@@ -1,4 +1,3 @@
-console.log('合作');
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");
 var lo = document.getElementsByClassName('login')[0];

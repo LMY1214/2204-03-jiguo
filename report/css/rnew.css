@@ -48,11 +48,7 @@ body {
 
 .report {
   width: 1000px;
-<<<<<<< HEAD
   height: 2547px;
-=======
-  /* height: 2547px; */
->>>>>>> dev
   padding-top: 25px;
   /* background-color: aquamarine; */
   margin: 0 auto;
@@ -65,10 +61,8 @@ body {
 
 .listinfo ul {
   list-style: none;
-<<<<<<< HEAD
-=======
   overflow: hidden;
->>>>>>> dev
+
 }
 
 .left {
@@ -76,10 +70,7 @@ body {
 }
 
 .listinfo li {
-<<<<<<< HEAD
-=======
   /* height: 500px; */
->>>>>>> dev
   border-radius: 6px;
   border: 1px solid #e6e9e9;
   margin-bottom: 13px;

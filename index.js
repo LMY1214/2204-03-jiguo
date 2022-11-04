@@ -22,7 +22,6 @@ applying.onclick = function () {
     numLose.innerHTML = numlose;
 }
 // 倒计时函数
-// countDown()
 setInterval(countDown, 1000)
 function fn(a) {
     return a >= 10 ? a : '0' + a;
@@ -46,28 +45,6 @@ function countDown() {
         var timebig = document.getElementsByClassName('timebig')[0];
         timebig.innerHTML = '申请已结束'
     }
-
-    // var nowTime = new Date();
-    // var goTime = new Date(2022, 10, 11);
-    // var mistiming = goTime - nowTime;
-    // var day1 = parseInt(mistiming / 1000 / 60 / 60 / 24);
-    // var day = fn1(parseInt(mistiming / 1000 / 60 / 60 / 24));
-    // // console.log(day);
-    // var sh1 = parseInt(mistiming / 1000 / 60 / 60 % 24);
-    // var sh = fn1(parseInt(mistiming / 1000 / 60 / 60 % 24));
-    // // console.log(s);
-    // var m1 = parseInt(mistiming / 1000 / 60 % 60);
-    // var m = fn1(parseInt(mistiming / 1000 / 60 % 60));
-    // // console.log(m);
-    // var s1 = parseInt(mistiming / 1000 % 60);
-    // s = fn1(parseInt(mistiming / 1000 % 60));
-    // // console.log(s);
-    // str = day + '天' + sh + '时' + m + '分' + s + '秒';
-    // time.innerHTML = str;
-    // if (day1 <= 0 && sh1 <= 0 && m1 <= 0 && s1 <= 0) {
-    //     var timebig = document.getElementsByClassName('timebig')[0];
-    //     timebig.innerHTML = '申请已结束'
-    // }
 
 }
 
@@ -111,7 +88,7 @@ function ajaxfn() {
             if (ajax_.status == 200) {
                 var datalis = JSON.parse(ajax_.responseText);
                 show(datalis);
-                loadimg.src = './../img/more.png';
+                loadimg.src = './img/more.png';
                 flggnum++;
                 if (flggnum == 2) {
                     load.innerHTML = '没有更多了~'
@@ -146,6 +123,11 @@ function show(a) {
             window.location.href = './try/tryDetail.html'
         }
     }
+
+
+
+
+
     // 点赞
     var r_praiselis = document.getElementsByClassName('r_praise');
     for (var item of r_praiselis) {
@@ -167,7 +149,7 @@ function show(a) {
 // 点击加载更多
 var flgg = true;
 load.onclick = function () {
-    loadimg.src = './../img/loading-icon.gif'
+    loadimg.src = './img/loading-icon.gif'
     if (flgg) {
         setTimeout(ajaxfn, 2000);
         flgg = false;

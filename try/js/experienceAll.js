@@ -1,3 +1,4 @@
+/*试用下边四个html都引用的这个js */
 var first = document.getElementsByClassName('first')[0];
 var spans = first.children[0].children;
 var second = document.getElementsByClassName('second')[0];
@@ -145,8 +146,18 @@ function tryLoading(address) {
             span1.style.color = '#80c269';
             span1.innerHTML = '查看试用名单'
         }
-        // // // 首发下边边框改变颜色
-        var hrlis = document.getElementsByClassName('hrcplor');
+        // 点击跳转详情页
+        var s_contents = document.getElementsByClassName('s_content')[0].children;
+        for (var item1 of s_contents) {
+            item1.onclick = function () {
+                window.location.href = './tryDetail.html'
+            }
+        }
+    }
+    // // // 首发下边边框改变颜色
+    var hrlis = document.getElementsByClassName('hrcplor');
+    for (var item of hrlis) {
+        var spans = item.nextElementSibling.nextElementSibling.nextElementSibling.children;
         for (var i in hrlis) {
             var spans = hrlis[i].nextElementSibling.nextElementSibling.nextElementSibling.children;
             if (i % 3 == 0) {
@@ -159,15 +170,8 @@ function tryLoading(address) {
                 span1.innerHTML = '查看试用名单'
             }
         }
-
-        // 点击跳转详情页
-        var s_contents = document.getElementsByClassName('s_content')[0].children;
-        for (var item1 of s_contents) {
-            item1.onclick = function () {
-                window.location.href = './tryDetail.html'
-            }
-        }
     }
+
     // 点击加载更多
     var flgg = true;
     load.onclick = function () {
