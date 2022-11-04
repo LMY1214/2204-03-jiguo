@@ -30,21 +30,45 @@ function fn(a) {
 }
 function countDown() {
     var nowTime = new Date();
-    var goTime = new Date(2022, 11, 11);
+    var goTime = new Date(2022, 10, 11);
     var mistimingTime = goTime - nowTime;
-    var day1 = parseInt(mistimingTime / 1000 / 60 / 60 % 24);
-    var day = fn(parseInt(mistimingTime / 1000 / 60 / 60 % 24));
-    var sh1 = parseInt(mistimingTime / 1000 / 60 % 60);
-    var sh = fn(parseInt(mistimingTime / 1000 / 60 % 60));
-    var m1 = parseInt(mistimingTime / 1000 % 60);
-    var m = fn(parseInt(mistimingTime / 1000 % 60));
-    var str = day + '天' + sh + '小时' + m + '分钟';
+    var day1 = parseInt(mistimingTime / 1000 / 60 / 60 / 24);
+    var day = fn(parseInt(mistimingTime / 1000 / 60 / 60 / 24));
+    var sh1 = parseInt(mistimingTime / 1000 / 60 / 60 % 24);
+    var sh = fn(parseInt(mistimingTime / 1000 / 60 / 60 % 24));
+    var m1 = parseInt(mistimingTime / 1000 / 60 % 60);
+    var m = fn(parseInt(mistimingTime / 1000 / 60 % 60));
+    var s1 = parseInt(mistimingTime / 1000 % 60);
+    s = fn(parseInt(mistimingTime / 1000 % 60));
+    var str = day + '天' + sh + '小时' + m + '分钟' + s + '秒';
     var time = document.getElementsByClassName('time')[0];
     time.innerHTML = str;
-    if (day1 <= 0 && sh1 <= 0 && m1 <= 0) {
+    if (day1 <= 0 && sh1 <= 0 && m1 <= 0 && s1 <= 0) {
         var timebig = document.getElementsByClassName('timebig')[0];
         timebig.innerHTML = '申请已结束'
     }
+
+    // var nowTime = new Date();
+    // var goTime = new Date(2022, 10, 11);
+    // var mistiming = goTime - nowTime;
+    // var day1 = parseInt(mistiming / 1000 / 60 / 60 / 24);
+    // var day = fn1(parseInt(mistiming / 1000 / 60 / 60 / 24));
+    // // console.log(day);
+    // var sh1 = parseInt(mistiming / 1000 / 60 / 60 % 24);
+    // var sh = fn1(parseInt(mistiming / 1000 / 60 / 60 % 24));
+    // // console.log(s);
+    // var m1 = parseInt(mistiming / 1000 / 60 % 60);
+    // var m = fn1(parseInt(mistiming / 1000 / 60 % 60));
+    // // console.log(m);
+    // var s1 = parseInt(mistiming / 1000 % 60);
+    // s = fn1(parseInt(mistiming / 1000 % 60));
+    // // console.log(s);
+    // str = day + '天' + sh + '时' + m + '分' + s + '秒';
+    // time.innerHTML = str;
+    // if (day1 <= 0 && sh1 <= 0 && m1 <= 0 && s1 <= 0) {
+    //     var timebig = document.getElementsByClassName('timebig')[0];
+    //     timebig.innerHTML = '申请已结束'
+    // }
 
 }
 

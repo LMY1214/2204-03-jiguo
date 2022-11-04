@@ -1,5 +1,3 @@
-// console.log('试用-大众试用-全部');
-
 var first = document.getElementsByClassName('first')[0];
 var spans = first.children[0].children;
 var second = document.getElementsByClassName('second')[0];
@@ -71,9 +69,6 @@ function jump() {
         console.log(index_, index1_);
     }
 }
-
-
-
 
 // 试用页面请求数据,底部加载页面函数
 tryLoading('http://127.0.0.1:3000/useing/public');

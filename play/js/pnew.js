@@ -84,7 +84,8 @@ function show() {
   var detail = document.getElementsByClassName('detail');
   for (var item1 of detail) {
     item1.onclick = function () {
-      window.location.href = '../../guid/gdetail.html'
+      // window.location.href = 'http://127.0.0.1:5500/2204-03-jiguo/guid/gdetail.html'
+      location.href = '../../../guid/gdetail.html'
     }
   }
   //点击爱心加减

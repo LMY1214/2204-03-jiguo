@@ -30,14 +30,22 @@ h1 {
   display: inline-block;
   width: 165px;
 }
+.title > div span .tiao {
+  display: inline-block;
+  width: 165px;
+  height: 100%;
+  text-decoration: none;
+  color: #a3a3a3;
+}
+.title > div span .on1 {
+  color: #474747;
+}
 .title > div .on {
   color: #fe5431;
   border-bottom: 4px solid #fe5431;
 }
-.title > div .on1 {
-  color: #474747;
-}
 .slideshow_box {
   width: 100%;
   background-color: #f7f7f7;
+  margin-top: 10px;
 }
