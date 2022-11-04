@@ -236,8 +236,9 @@ btn_.onclick = function () {
         window.localStorage.setItem("user", input_user.value);
         setTimeout(function () {
             location.href = '../../login/login.html';
-            // location.href = 'https://www.baidu.com/';
+            // window.location.href = 'file:///C:/Users/%E6%9D%8E%E9%94%B0%E8%B6%8A/Desktop/%E7%AC%AC%E4%B8%89%E7%BB%84%20%E6%9D%8E%E9%94%B0%E8%B6%8A%20%E9%9B%B7%E9%97%AA%20%E7%8E%8B%E5%86%B0%E5%86%B0%20%E6%9E%81%E6%9E%9C%E9%A1%B9%E7%9B%AE/2204-03-jiguo/login/login.html';
         }, 1000);
+
     } else {
         alert("注册失败");
     }
