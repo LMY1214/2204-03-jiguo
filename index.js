@@ -1,4 +1,3 @@
-console.log('首页');
 var applying = document.getElementsByClassName('applying')[0];
 var people = document.getElementsByClassName('people')[0];
 var numLose = document.getElementsByClassName('numLose')[0];
@@ -97,17 +96,6 @@ clickTop.onclick = function () {
         }
     }, 20);
 }
-// // 点赞
-// var r_praiselis = document.getElementsByClassName('r_praise');
-// for (var item of r_praiselis) {
-//     item.onclick = function () {
-//         var praiseNum = this.innerHTML;
-//         praiseNum++;
-//         this.innerHTML = praiseNum;
-//     }
-// }
-// var r_content = document.getElementsByClassName('hh')[0].children[0];
-// console.log(r_content);
 // 页面请求数据,底部加载页面函数
 var load = document.getElementsByClassName('load')[0];
 var datalis = [];
@@ -137,7 +125,6 @@ function ajaxfn() {
 var str = '';
 function show(a) {
     for (var item of a[0]) {
-        // console.log(item.img);
         str += `
  <li class='hs'>
  <img src="${item.img}" alt="">
@@ -156,7 +143,6 @@ function show(a) {
     for (var item1 of lis) {
         var iteming = item1.children[0];
         iteming.onclick = function () {
-            console.log(this);
             window.location.href = './try/tryDetail.html'
         }
     }
@@ -165,7 +151,6 @@ function show(a) {
     for (var item of r_praiselis) {
         var flgclick = true;
         item.onclick = function () {
-            console.log('kk');
             var praiseNum = this.innerHTML;
             if (flgclick) {
                 praiseNum++;
@@ -191,7 +176,6 @@ load.onclick = function () {
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");
 var lo = document.getElementsByClassName('login')[0];
-console.log(lo);
 
 if (suc) {
     lo.innerHTML = window.localStorage.getItem("user")
@@ -223,8 +207,6 @@ function getCookie(key) {
 function removeCookie(key_) {
     this.setCookie(key_, '', -1);
 }
-
-
 // 清空cookie
 function clearCookie() {
     var arry = document.cookie.split('; ');
@@ -234,12 +216,13 @@ function clearCookie() {
         this.removeCookie(newArry[0]);
     }
 }
-// setCookie('登录1', '11')
-// console.log(getCookie('登录'));
-var tel = getCookie(user);
-if (tel == 'loginTel.value') {
-
+// 登录成功改变用户名
+var suc = window.localStorage.getItem("succeed");
+var lo = document.getElementsByClassName('login')[0];
+if (suc) {
+    lo.innerHTML = window.localStorage.getItem("user")
+    lo.style.borderColor = '#fff'
+    lo.style.fontSize = '14px'
 }
-
 
 

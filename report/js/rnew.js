@@ -71,7 +71,6 @@ function getData() {
             if (ajax_.status == 200) {
                 data = ajax_.responseText;
                 dataList = JSON.parse(data);
-                // console.log(dataList);
                 show(dataList);
             } else {
                 console.log("加载错误");
@@ -84,7 +83,6 @@ var zan = document.getElementsByClassName('zan');
 
 var zanflg = true;
 for (var item of zan) {
-    // console.log(item);
     item.onclick = function () {
         var zannum = this.innerHTML;
 
@@ -109,7 +107,6 @@ box1.appendChild(ul);
 function show(a) {
     var str = '';
     for (var item of a) {
-        // console.log(item.img);
         str += ` 
       <li>
         <a href="javaScript:;">
@@ -144,22 +141,15 @@ function show(a) {
     // }
 }
 // 点击加载更多
-console.log(more);
 var flgg = true;
 more.onclick = function () {
-    // console.log('11');
-
-    // loadimg.src = './../img/loading-icon.gif'
     if (flgg) {
         setTimeout(getData, 2000);
-        // flgg = false;
     }
 }
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");
 var lo = document.getElementsByClassName('login')[0];
-console.log(lo);
-
 if (suc) {
     lo.innerHTML = window.localStorage.getItem("user")
     lo.style.borderColor = '#fff'

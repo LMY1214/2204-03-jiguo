@@ -235,7 +235,6 @@ btn_.onclick = function () {
         window.localStorage.setItem("pwd", input_pws.value);
         window.localStorage.setItem("user", input_user.value);
         setTimeout(function () {
-            // console.log('11');
             location.href = '../../login/login.html'
         }, 1000);
     } else {
