@@ -19,28 +19,6 @@ function getData() {
     }
   };
 }
-//点击跳转页面
-// function onclickHover(obj) {
-//   obj.href = 'http://127.0.0.1:5500/2204-03-jiguo/guid/gdetail.html'
-// }
-// //点击爱心加减
-// function onclickImg(obj) {
-//   var red = 'http://127.0.0.1:5500/2204-03-jiguo/img/xinRedh.png'
-//   var black = 'http://127.0.0.1:5500/2204-03-jiguo/img/xinRedo.png'
-//   var src = obj.src == red ? black : red;
-//   obj.src = src;
-//   obj.style.width = '13px'
-//   obj.style.hight = '13px'
-//   if (obj.src == red) {
-//     obj.previousElementSibling.innerHTML++;
-//   } else {
-//     obj.previousElementSibling.innerHTML--;
-//   }
-// }
-//   function fn( than){
-// than.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gnew.html'
-//   }
-
 var xinFlg = true;
 function onclickImg(obj) {
   var xinnum = obj.previousElementSibling.innerHTML;
@@ -57,11 +35,6 @@ function onclickImg(obj) {
   }
   obj.previousElementSibling.innerHTML = xinnum;
 }
-// var section = document.getElementsByTagName('section')[0]
-// var ul = document.createElement('ul')
-// ul.className = 'list'
-// var body = document.getElementsByTagName('body')[0]
-// section.appendChild(ul)
 var ul = document.getElementsByClassName('list')[0];
 function show() {
   var str = "";
@@ -97,20 +70,6 @@ on.onclick = function () {
   setTimeout(getData, 2000)
 
 }
-// window.onscroll = function () {
-//   // 窗口高度
-//   var winHeight =
-//     document.documentElement.clientHeight || document.body.clientHeight;
-//   //滚动条的高度  滚动出页面的高度
-//   var scrollTop =
-//     document.documentElement.scrollTop || document.body.scrollTop;
-//   //页面的整体高度
-//   var scrollH =
-//     document.documentElement.scrollHeight || document.body.scrollHeight;
-//   if (winHeight + scrollTop >= scrollH) {
-//  show()
-//   }
-// };
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");
 var lo = document.getElementsByClassName('login')[0];

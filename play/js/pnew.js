@@ -18,26 +18,6 @@ function getData() {
     }
   };
 }
-//点击跳转页面
-//   function onclickHover(obj){
-// // obj.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gnew.html'
-// obj.href='http://127.0.0.1:5500/2204-03-jiguo/guid/gnew.html'
-//   }
-
-//点击爱心加减
-// function  onclickImg(obj){
-// var red='http://127.0.0.1:5500/2204-03-jiguo/img/xinRedh.png'
-// var black='http://127.0.0.1:5500/2204-03-jiguo/img/xinRedo.png'
-// var src=obj.src==red?black:red;
-// obj.src=src;
-// obj.style.width='13px'
-// obj.style.hight='13px'
-// if(obj.src==red){
-//   obj.previousElementSibling.innerHTML++;
-// }else{
-//   obj.previousElementSibling.innerHTML--;
-// }
-//   }
 
 
 var ul = document.getElementsByClassName('list')[0]
@@ -80,14 +60,6 @@ function show() {
     }
   }
   ul.innerHTML = str;
-  // 点击跳转详情页
-  // var detail = document.getElementsByClassName('detail');
-  // for (var item1 of detail) {
-  //   item1.onclick = function () {
-  //     window.location.href = 'http://127.0.0.1:5500/2204-03-jiguo/guid/gdetail.html'
-  //     // location.href = '../../../guid/gdetail.html'
-  //   }
-  // }
   //点击爱心加减
   var xinFlg = true;
   var imglis = document.getElementsByClassName('img1');
@@ -119,31 +91,8 @@ on.onclick = function () {
   img_more.src = '../img/loading-icon.gif'
   setTimeout(show, 2000)
   ind++
-  // if (ind >= 3) {
-  //   on.innerHTML = '数据加载完成~'
-  //   img_more.parentNode.removeChild(img_more)
-  // }
 
 }
-// on.onclick = function () {
-//   img_more.src = '../img/loading-icon.gif'
-//   setTimeout(show, 2000)
-
-// }
-// window.onscroll = function () {
-//   // 窗口高度
-//   var winHeight =
-//     document.documentElement.clientHeight || document.body.clientHeight;
-//   //滚动条的高度  滚动出页面的高度
-//   var scrollTop =
-//     document.documentElement.scrollTop || document.body.scrollTop;
-//   //页面的整体高度
-//   var scrollH =
-//     document.documentElement.scrollHeight || document.body.scrollHeight;
-//   if (winHeight + scrollTop >= scrollH) {
-
-//   }
-// };
 
 // 登陆成功用户名改变
 var suc = window.localStorage.getItem("succeed");

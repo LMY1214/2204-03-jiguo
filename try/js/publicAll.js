@@ -1,3 +1,4 @@
+/* 大众下边四个html都引用的这个js */
 var first = document.getElementsByClassName('first')[0];
 var spans = first.children[0].children;
 var second = document.getElementsByClassName('second')[0];

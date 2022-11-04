@@ -1,8 +1,11 @@
 /* 试用-大众试用-全部 */
+/* 大众下边四个html都引用的这个css */
+/* 大众下边四个html都引用的这个css */
 * {
   padding: 0;
   margin: 0;
 }
+
 h1 {
   font-size: 40px;
   font-weight: normal;
@@ -11,39 +14,47 @@ h1 {
   text-align: center;
   margin: 15px 0 20px 0;
 }
+
 .first {
   border-bottom: 1px solid #f0f0f0;
 }
+
 .title {
   width: 100%;
   color: #a3a3a3;
   font-size: 18px;
 }
-.title > div {
+
+.title>div {
   width: 1000px;
   margin: 0 auto;
   text-align: center;
   height: 45px;
   line-height: 45px;
 }
-.title > div span {
+
+.title>div span {
   display: inline-block;
   width: 165px;
 }
-.title > div span .tiao {
+
+.title>div span .tiao {
   display: inline-block;
   width: 165px;
   height: 100%;
   text-decoration: none;
   color: #a3a3a3;
 }
-.title > div span .on1 {
+
+.title>div span .on1 {
   color: #474747;
 }
-.title > div .on {
+
+.title>div .on {
   color: #fe5431;
   border-bottom: 4px solid #fe5431;
 }
+
 .slideshow_box {
   width: 100%;
   background-color: #f7f7f7;
