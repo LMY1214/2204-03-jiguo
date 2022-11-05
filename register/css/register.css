@@ -1,184 +1,177 @@
-/* 正确错误样式 */
-.correct {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.form .true {
   color: green;
 }
 
-.error {
+.form .erro {
   color: red;
 }
 
-/* 注册页主体 */
-.register {
-  background-color: #f7f7f7;
-  padding-bottom: 35px;
-  padding-top: 25px;
+body {
+  font-family: "Microsoft YaHei", SimHei, "微软雅黑", "黑体";
+  line-height: 1.6;
 }
 
-.register .content {
-  background-color: white;
+.zc {
+  background: #f7f7f7;
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.zhuce {
   border-radius: 8px;
   box-sizing: border-box;
-  border: 1px solid #d7d7d7;
+  border: 1px #d7d7d7 solid;
   width: 1000px;
-  margin: 0 auto;
-  padding: 30px 0px;
+  text-align: left;
+  margin: 0px auto;
 }
 
-.register .content h2 {
+
+
+.zhuce .title {
   position: relative;
+  /* padding: 20px 0 20px 25px; */
+  margin-top: 20px;
+  margin-left: 25px;
   font-size: 20px;
-  font-weight: 400;
-  height: 25px;
-  padding-left: 30px;
-  line-height: 25px;
   color: #474747;
+  line-height: 1.6;
 }
 
-.register .content h2::after {
-  background-color: #fe5341;
-  position: absolute;
+.zhuce .title:after {
+  background: #fe5341;
   content: "";
+  position: absolute;
   display: block;
   width: 6px;
   height: 25px;
-  left: 0px;
-  top: 0px;
+  left: -25px;
+  top: 4px;
 }
 
-.register .content .inner {
-  width: 360px;
-  margin: 70px auto;
+.nr {
+  width: 100%;
+}
+
+.nr .form {
+  width: 530px;
+  margin: 0px auto 150px;
+  margin-left: 300px;
+  /* background-color: cadetblue; */
   position: relative;
 }
 
-.register .content .inner span {
+.form p {
+  padding-top: 27px;
+}
+
+.form input {
+  background-color: rgb(217, 216, 216);
+  color: #a3a3a3;
+  height: 50px;
+  padding-left: 10px;
+  width: 350px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 1px #eee solid;
+  border-radius: 10px;
+}
+
+.form span {
+  color: rgb(0, 0, 0);
+  font-size: 12px;
   width: 200px;
   height: 55px;
   position: absolute;
-  left: 398px;
-  top: 77px;
+  left: 361px;
   line-height: 55px;
   text-indent: 5px;
   font-size: 13px;
   font-weight: 600;
 }
 
-.register .content .inner span:nth-of-type(1) {
-  top: -3px;
+.form span:nth-of-type(1) {
+  top: 22px;
 }
 
-.register .content .inner span:nth-of-type(3) {
-  top: 153px;
+.form span:nth-of-type(2) {
+  top: 104px;
 }
 
-.register .content .inner span:nth-of-type(4) {
-  top: 230px;
+.form span:nth-of-type(3) {
+  top: 177px;
 }
 
-.register .content .inner span:nth-of-type(5) {
-  top: 309px;
+.form span:nth-of-type(4) {
+  top: 252px;
 }
 
-.register .content .inner span:nth-of-type(6) {
-  top: 387px;
+.form span:nth-of-type(5) {
+  top: 330px;
 }
 
-.register .content .inner img {
+.form span:nth-of-type(6) {
+  top: 408px;
+}
+
+.form img {
   position: absolute;
-  top: 84px;
-  right: -30px;
+  left: 218px;
+  top: 118px;
 }
 
-.register .content .inner .item {
-  width: 350px;
-  margin: 0 auto;
+.form p:nth-of-type(3) {
   position: relative;
-  height: 18px;
-  margin-bottom: 30px;
-  padding: 14px 18px;
-  background-color: #f7f7f7;
-  border: 1px solid #eeeeee;
-  line-height: 18px;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-.register .content .inner .item input {
-  width: 335px;
-  height: 18px;
-  border: none;
-  line-height: 18px;
-  vertical-align: middle;
-  outline: none;
-  color: #757575;
-  font-size: 16px;
-  background-color: #f7f7f7;
+.form p:nth-of-type(2) input {
+  width: 195px;
 }
 
-.register .content .inner .item:nth-of-type(2) {
-  width: 200px;
-  float: left;
+.form p:nth-of-type(3) input {
+  width: 195px;
 }
 
-.register .content .inner .item:nth-of-type(3) {
-  width: 200px;
-  float: left;
-}
-
-.register .content .inner .item1 {
-  width: 350px !important;
-}
-
-.register .content .inner .code {
-  width: 120px;
-  height: 50px;
-  background-color: white;
-  border: 1px solid #a3a3a3;
-  float: right;
-  border-radius: 10px;
-  color: #a3a3a3;
-  line-height: 50px;
-  text-align: center;
-  font-size: 14px;
-  cursor: pointer;
+/* .form p:nth-of-type(2) img {
   position: absolute;
-  top: 155px;
-  right: -26px;
+  bottom: 0;
+  left: 217px;
+} */
+
+.form p:nth-of-type(3) .yzbtn {
+  position: absolute;
+  bottom: 0px;
+  left: 218px;
+  color: #a3a3a3;
 }
 
-.register .content .inner .btn {
-  width: 385px;
-  height: 50px;
-  border-radius: 10px;
-  border: none;
-  background-color: #fe5341;
-  color: #fff5f8;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.register .content .inner .remember {
-  width: 385px;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 10px;
+.form p:nth-of-type(3) .yzbtn {
+  display: block;
   box-sizing: border-box;
-  color: #5a5a5a;
+  width: 132px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px #a3a3a3 solid;
+  border-radius: 10px;
   font-size: 14px;
-  margin-bottom: 15px;
+  text-align: center;
 }
 
-.register .content .inner .remember input {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-.register .content .inner .remember label {
+#btn {
+  background: #fe5341;
+  color: #fff;
+  border: medium none;
+  width: 350px;
   cursor: pointer;
-  vertical-align: middle;
-}
-
-.register .content .inner .remember a {
-  float: right;
-  color: #5a5a5a;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  border-radius: 10px;
 }

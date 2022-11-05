@@ -1,5 +1,4 @@
-// 登录功能
-
+console.log('登录');
 // - setCookie()——创建Cookie
 
 function setCookie(key, val, time) {
@@ -33,30 +32,31 @@ function clearCookie() {
         this.removeCookie(newArry[0]);
     }
 }
-var loginTel = document.getElementsByClassName("loginTel")[0];
-var conFirmPws = document.getElementsByClassName("conFirmPws")[0];
-var check = document.getElementById("check");
-var btn = document.getElementsByClassName("btn")[0];
 
+var Tel = document.getElementsByClassName("Tel")[0];
+var psw = document.getElementsByClassName("psw")[0];
+var check = document.getElementById("check");
+var btn = document.getElementById('btn');
 // 记住密码 功能
 window.addEventListener("load", function () {
     if (window.localStorage.getItem("check") == "true") {
-        loginTel.value = window.localStorage.getItem("tel");
-        conFirmPws.value = window.localStorage.getItem("pwd");
+        Tel.value = window.localStorage.getItem("tel");
+        psw.value = window.localStorage.getItem("psw1");
         check.checked = window.localStorage.getItem("check");
     }
 });
 // 判断账号密码是否输入正确
+// btn.addEventListener("click", function (){
 btn.addEventListener("click", function () {
     var telLocalStorage = window.localStorage.getItem("tel");
-    var pwdLocalStorage = window.localStorage.getItem("pwd");
-    if (loginTel.value == telLocalStorage &&
-        conFirmPws.value == pwdLocalStorage) {
+    var pswLocalStorage = window.localStorage.getItem("psw");
+    if (Tel.value == telLocalStorage &&
+        psw.value == pswLocalStorage) {
         alert("登录成功");
         window.location.href = "../index.html"
         window.localStorage.setItem("check", check.checked);
         window.localStorage.setItem("succeed", true);
-        window.localStorage.setItem('user', loginTel.value)
+        window.localStorage.setItem('user', Tel.value)
         window.localStorage.setItem('登录', 'ture')
 
     } else {

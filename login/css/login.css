@@ -1,70 +1,83 @@
-/* 登录 */
-* {
-    padding: 0;
-    margin: 0;
+.form .true {
+    color: green;
 }
 
-.reg-box {
+.form .erro {
+    color: red;
+}
+
+body {
+    font-family: "Microsoft YaHei", SimHei, "微软雅黑", "黑体";
+    line-height: 1.6;
+}
+
+.zc {
     background: #f7f7f7;
-    padding-bottom: 35px;
-    padding-top: 25px;
+    padding-top: 35px;
+    padding-bottom: 40px;
 }
 
-.reg {
-    width: 1000px;
-    margin: 0 auto;
-    background: #fff;
+.zhuce {
     border-radius: 8px;
     box-sizing: border-box;
     border: 1px #d7d7d7 solid;
+    width: 1000px;
+    text-align: left;
+    margin: 0px auto;
 }
 
-.reg .title {
+
+
+.zhuce .title {
     position: relative;
-    padding: 20px 0 20px 25px;
+    /* padding: 20px 0 20px 25px; */
+    margin-top: 20px;
+    margin-left: 25px;
     font-size: 20px;
     color: #474747;
     line-height: 1.6;
 }
 
-.reg .title:after {
+.zhuce .title:after {
     background: #fe5341;
     content: "";
     position: absolute;
     display: block;
     width: 6px;
     height: 25px;
-    left: 0;
-    top: 24px;
+    left: -25px;
+    top: 4px;
 }
 
-.regform {
-    width: 400px;
-    margin: 50px auto 150px;
+.nr {
+    width: 100%;
 }
 
-.regform p {
-    margin-top: 27px;
+.nr .form {
+    width: 350px;
+    margin: 0px auto 150px;
+    /* background-color: cadetblue; */
+    position: relative;
 }
 
-.regform a {
-    text-decoration: none;
+.form p {
+    padding-top: 27px;
 }
 
-.regform input {
-    background: #f7f7f7;
+.form p input {
+    background-color: rgb(217, 216, 216);
     color: #a3a3a3;
     height: 50px;
     padding-left: 10px;
     width: 100%;
     outline: none;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px #eee solid;
     border-radius: 10px;
 }
 
-.regform p button {
+#btn {
     background: #fe5341;
     color: #fff;
     border: medium none;
@@ -73,6 +86,45 @@
     height: 50px;
     text-align: center;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 16px;
     border-radius: 10px;
+}
+
+.form .remember {
+    width: 385px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color: #5a5a5a;
+    font-size: 12px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.clearfix {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#check {
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.form label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.form .remember a {
+    float: right;
+    color: #5a5a5a;
+    text-decoration: none;
+    position: absolute;
+    right: 43px;
+    bottom: 0px;
 }
