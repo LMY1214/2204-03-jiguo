@@ -1,245 +1,235 @@
-
 // 注册页功能
-
-var input_tel = document.getElementsByClassName("tel")[0];
-var input_verify = document.getElementsByClassName("verify")[0];
-var input_yz = document.getElementsByClassName("yanzheng")[0];
-var btn_code = document.getElementsByClassName("code")[0];
-var input_user = document.getElementsByClassName("user")[0];
-var input_pws = document.getElementsByClassName("pws")[0];
-var input_confirmPws = document.getElementsByClassName("confirmPws")[0];
-var btn_ = document.getElementsByClassName("btn")[0];
-var span_ = document.getElementsByTagName("span");
+var tel = document.getElementsByClassName('tel')[0];
+var tuyan = document.getElementsByClassName('tuyan')[0];
+var yan = document.getElementsByClassName("yan")[0];
+var yzbtn = document.getElementsByClassName("yzbtn")[0];
+var user = document.getElementsByClassName("user")[0];
+var psw1 = document.getElementsByClassName('psw1')[0];
+var psw2 = document.getElementsByClassName('psw2')[0];
+var span = document.getElementsByTagName("span");
+var btn = document.getElementById('btn');
 
 // 手机号验证功能
 var telBool = false;
-var reg_tel = /^1[3-9][0-9]{9}$/;
-input_tel.addEventListener("focus", () => {
-    span_[0].className = "";
-    span_[0].innerHTML = "请输入11位手机号";
-});
-input_tel.addEventListener("blur", () => {
-    var judge = reg_tel.test(input_tel.value);
-    if (input_tel.value == "") {
-        span_[0].innerHTML = "手机号不能为空";
-    }
-    if (input_tel.value == "") {
-        span_[0].className = "error";
-        span_[0].innerHTML = "手机号不能为空";
+tel.onfocus = function () {
+    tel.style.display = 'inline block';
+    span[0].className = "";
+    span[0].innerHTML = "请输入11位手机号";
+}
+
+tel.onblur = function () {
+    var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;
+    if (tel.value == '') {
+        span[0].innerHTML = '不能为空';
+        span[0].className = 'erro'
         telBool = false;
-    } else if (!judge) {
-        span_[0].className = "error";
-        span_[0].innerHTML = "输入格式错误请重新输入";
+    } else if (!reg.test(tel.value)) {
+        tel.innerHTML = '格式不对，请重新输入'
+        span[0].className = 'erro'
         telBool = false;
     } else {
-        span_[0].className = "correct";
-        span_[0].innerHTML = "正确";
+        span[0].innerHTML = '正确'
+        span[0].className = 'true'
         telBool = true;
     }
-});
+}
+
+
 
 // 图片效验码功能
-var verifyBool = false;
-var reg_verify = /[r]{1}[2]{1}[B]{1}[7]{1}/i;
-input_verify.addEventListener("focus", () => {
-    span_[1].className = "";
-    span_[1].innerHTML = "请输入图片验证码";
-});
-input_verify.addEventListener("blur", () => {
-    var yard = reg_verify.test(input_verify.value);
-    if (input_verify.value == "") {
-        span_[1].className = "error";
-        span_[1].innerHTML = "图片验证码不能为空";
-        verifyBool = false;
+var tuyanBool = false;
+tuyan.onfocus = function () {
+    tuyan.style.display = 'inline block';
+    span[1].className = "";
+    span[1].innerHTML = "请输入图片验证码";
+}
+tuyan.onblur = function () {
+    var reg_tuyan = /[r]{1}[2]{1}[B]{1}[7]{1}/i;
+    var yard = reg_tuyan.test(tuyan.value);
+    if (tuyan.value == "") {
+        span[1].className = "erro";
+        span[1].innerHTML = "图片验证码不能为空";
+        tuyanBool = false;
     } else if (yard) {
-        span_[1].className = "correct";
-        span_[1].innerHTML = "正确";
-        verifyBool = true;
+        span[1].className = "true";
+        span[1].innerHTML = "正确";
+        tuyanBool = true;
     } else {
-        span_[1].className = "error";
-        span_[1].innerHTML = "输入的图片验证码与图中不符";
-        verifyBool = false;
+        span[1].className = "erro";
+        span[1].innerHTML = "输入的图片验证码与图中不符";
+        tuyanBool = false;
+
     }
-});
+}
 
 // 设置验证码倒计时
-var countDown_yz = 60;
-// 定时器
-var timer_yz = null;
-var index_yz = 0;
-var diGit = [];
-// 获取验证码功能
-btn_code.addEventListener("click", () => {
-    if (telBool) {
-        if (btn_code) {
-            // 当点击了之后禁选
-            btn_code.setAttribute("disabled", "true");
-            // 先清空一下
-            clearInterval(timer_yz);
-            timer_yz = setInterval(function () {
-                countDown_yz--;
-                btn_code.innerHTML = "( " + countDown_yz + " 秒 ) 重发";
-                if (countDown_yz == 0) {
-                    btn_code.innerHTML = "重新获取验证码";
-                    clearInterval(timer_yz);
-                    countDown_yz = 59;
-                    btn_code.removeAttribute("disabled");
-                }
-                if (countDown_yz == 58) {
-                    diGit = [];
-                    // 设置随机验证码
-                    for (let i = 1; i <= 4; i++) {
-                        var number = Math.floor(Math.random() * 10);
-                        diGit.push(number);
-                    }
-                    diGit = diGit.join("").slice(",");
-                    alert(
-                        `您注册的验证码为：${diGit}，请您尽快注册，请不要把验证码泄露给其他人，如非本人请勿操作！`
-                    );
-                }
-            }, 1000);
-        }
-    } else {
-        alert(`请先输入手机号`);
+var timer = null;
+// 获取四位随机数
+var num = 0;
+// var time = 60;
+// 验证码输入框
+var yan = document.getElementsByClassName('yan')[0];
+// 验证码按钮
+var yzbtn = document.getElementsByClassName('yzbtn')[0];
+
+yzbtn.onclick = function () {
+    var time = 60;
+    yan.value = '';
+    yzbtn.innerHTML = "( " + time + " 秒 ) 重发"
+    yzbtn.style.backgroundColor = '#fff';
+    yzbtn.style.color = '#57565f';
+    var time = 60;
+    timer = setInterval(function () {
+        time--;
+        yzbtn.innerHTML = "( " + time + " 秒 ) 重发"
+    }, 1000)
+    if (time == 0) {
+        yzbtn.innerHTML = "重新获取验证码";
+        clearInterval(timer);
+        time = 59;
+        yzbtn.removeAttribute("disabled");
     }
-});
+    setTimeout(function () {
+        num = Math.ceil(Math.random() * 10000);
+        if (num < 1000) {
+            num = num + '0';
+        }
+        alert('【极果】欢迎注册极果！验证码为' + num + '，为保障账户安全，请勿泄露给他人')
+        clearInterval(timer);
+        yzbtn.innerHTML = '重新获取验证码'
+    }, 3000)
+}
+yan.onblur = function () {
+    if (yan.value != num) {
+        span[2].innerHTML = '验证码不正确';
+        span[2].className = 'erro'
+    } else {
+        span[2].innerHTML = '正确;'
+        span[2].className = 'true'
+        span[2].innerHTML = '获取验证码'
+        span[2].style.backgroundColor = '#57565f';
+        span[2].style.color = '#fff';
+    }
+}
 
 // 数字验证码验证
-var yzBool = false;
-input_yz.addEventListener("focus", () => {
-    span_[2].className = "";
-    span_[2].innerHTML = "请输入获取的验证码";
-});
-input_yz.addEventListener("blur", () => {
-    if (input_yz.value == "") {
-        span_[2].className = "error";
-        span_[2].innerHTML = "验证码不能为空";
-        yzBool = false;
-    } else if (input_yz.value == diGit) {
-        span_[2].className = "correct";
-        span_[2].innerHTML = "正确";
-        yzBool = true;
+var yanBool = false;
+yan.onfocus = function () {
+    span[2].className = "";
+    span[2].innerHTML = "请输入获取的验证码";
+}
+yan.onblur = function () {
+    if (yan.value != num) {
+        span[2].innerHTML = '验证码不正确';
+        span[2].className = 'erro'
+        yanBool = false;
     } else {
-        span_[2].className = "error";
-        span_[2].innerHTML = "验证码错误";
-        yzBool = false;
+        span[2].innerHTML = '正确'
+        span[2].className = 'true'
+        yanBool = true;
+        // yzbtn.innerHTML = '获取验证码'
+        // yzbtn.style.backgroundColor = '#57565f';
+        // yzbtn.style.color = '#fff';
     }
-});
+}
 
 // 用户名验证
 var userBool = false;
-var reg_user = /^([\u4e00-\u9fa5]|\w){2,7}$/;
-input_user.addEventListener("focus", () => {
-    span_[3].className = "";
-    span_[3].innerHTML = "由中文数字字母下划线组成2~7位";
-});
-input_user.addEventListener("blur", () => {
-    var consumer = reg_user.test(input_user.value);
-    if (input_user.value == "") {
-        span_[3].className = "error";
-        span_[3].innerHTML = "您的用户名不能为空";
+user.onfocus = function () {
+    span[3].className = "";
+    span[3].innerHTML = "由中文数字字母下划线组成2~7位";
+}
+user.onblur = function () {
+    var reg_user = /^([\u4e00-\u9fa5]|\w){2,7}$/;
+    var consumer = reg_user.test(user.value);
+    if (user.value == "") {
+        span[3].className = "erro";
+        span[3].innerHTML = "您的用户名不能为空";
         userBool = false;
     } else if (consumer) {
-        span_[3].className = "correct";
-        span_[3].innerHTML = "正确";
+        span[3].className = "true";
+        span[3].innerHTML = "正确";
         userBool = true;
     } else {
-        span_[3].className = "error";
-        span_[3].innerHTML = "用户名输入格式错误";
+        span[3].className = "erro";
+        span[3].innerHTML = "用户名输入格式错误";
         userBool = false;
     }
-});
+}
 
 // 密码验证
-var pwsBool = false;
-var reg_pws = /^\d{6}$/;
-input_pws.addEventListener("focus", () => {
-    span_[4].className = "";
-    span_[4].innerHTML = "密码为6位数字";
-});
-input_pws.addEventListener("blur", () => {
-    var pass = reg_pws.test(input_pws.value);
-    if (input_pws.value == "") {
-        span_[4].className = "error";
-        span_[4].innerHTML = "密码不能为空";
-        pwsBool = false;
-    } else if (pass) {
-        span_[4].className = "correct";
-        span_[4].innerHTML = "正确";
-        pwsBool = true;
-    } else {
-        span_[4].className = "error";
-        span_[4].innerHTML = "密码格式错误";
-        pwsBool = false;
+var psw1Bool = false;
+psw1.onblur = function () {
+    var reg = /^\w{6,8}$/;
+    var reg1 = /[^0-9]/;
+    var reg2 = /[^a-zA-Z]/;
+    // console.log(reg.test(psw1.value));
+    if (psw1.value == '') {
+        span[4].innerHTML = '不能为空';
+        span[4].className = 'erro'
+        psw1Bool = false;
+    } else if (!reg.test(psw1.value)) {
+        span[4].innerHTML = '最少6位，最多8位'
+        span[4].className = 'erro'
+        psw1Bool = false;
+    } else if (!reg1.test(psw1.value)) {
+        span[4].innerHTML = '不能全是数字';
+        span[4].className = 'erro'
+        psw1Bool = false;
+    } else if (!reg2.test(psw1.value)) {
+        span[4].innerHTML = '不能全是字母';
+        span[4].className = 'erro'
+        psw1Bool = false;
     }
-    if (pass) {
-        if (input_pws.value != input_confirmPws.value) {
-            span_[5].className = "error";
-            span_[5].innerHTML = "两次密码输入不一致";
-            conBool = false;
-        } else {
-            span_[5].className = "correct";
-            span_[5].innerHTML = "正确";
-            conBool = true;
-        }
-    } else {
-        span_[5].className = "error";
-        span_[5].innerHTML = "输入错误";
-        conBool = false;
+    else {
+        span[4].innerHTML = '正确'
+        span[4].className = 'true'
+        psw1Bool = true;
     }
-});
+}
 
 // 确认密码验证
-var conBool = false;
-input_confirmPws.addEventListener("focus", () => {
-    span_[5].className = "";
-    span_[5].innerHTML = "确认密码";
-});
-input_confirmPws.addEventListener("blur", () => {
-    var pass = reg_pws.test(input_pws.value);
-    if (input_confirmPws.value == "") {
-        span_[5].className = "error";
-        span_[5].innerHTML = "确认密码不能为空";
-        conBool = false;
-    }
-    if (pass) {
-        if (input_pws.value != input_confirmPws.value) {
-            span_[5].className = "error";
-            span_[5].innerHTML = "两次密码输入不一致";
-            conBool = false;
-        } else {
-            span_[5].className = "correct";
-            span_[5].innerHTML = "正确";
-            conBool = true;
-        }
+var psw2Bool = false;
+psw2.onblur = function () {
+    var reg = /^\w{6,8}$/;
+    if (psw2.value == '') {
+        span[5].innerHTML = '不能为空';
+        span[5].className = 'erro'
+    } else if (!reg.test(psw2.value)) {
+        span[5].innerHTML = '最少6位，最多8位'
+        span[5].className = 'erro'
+        psw2Bool = false;
+    } else if (psw2.value != psw1.value) {
+        span[5].innerHTML = '两次密码输入不一致'
+        span[5].className = 'erro'
+        psw2Bool = false;
     } else {
-        span_[5].className = "error";
-        span_[5].innerHTML = "确认密码输入错误";
-        conBool = false;
+        span[5].innerHTML = '正确'
+        span[5].className = 'true'
+        psw2Bool = true;
+
     }
-});
+}
 
 // 当点击立即注册时
-btn_.onclick = function () {
-    if (
-        telBool == true &&
-        verifyBool == true &&
-        yzBool == true &&
-        userBool == true &&
-        pwsBool == true &&
-        conBool == true
-    ) {
+btn.onclick = function () {
+    if (telBool == true && tuyanBool == true && yanBool == true && userBool == true && psw1Bool == true && psw2Bool == true) {
         alert("注册成功");
         // 往 localStorage 存储 内容
-        window.localStorage.setItem("tel", input_tel.value);
-        window.localStorage.setItem("pwd", input_pws.value);
-        window.localStorage.setItem("user", input_user.value);
+        window.localStorage.setItem("tel", tel.value);
+        window.localStorage.setItem("psw", psw1.value);
+        window.localStorage.setItem("user", user.value);
         setTimeout(function () {
-            location.href = '../login/login.html';
-            // window.location.href = 'file:///C:/Users/%E6%9D%8E%E9%94%B0%E8%B6%8A/Desktop/%E7%AC%AC%E4%B8%89%E7%BB%84%20%E6%9D%8E%E9%94%B0%E8%B6%8A%20%E9%9B%B7%E9%97%AA%20%E7%8E%8B%E5%86%B0%E5%86%B0%20%E6%9E%81%E6%9E%9C%E9%A1%B9%E7%9B%AE/2204-03-jiguo/login/login.html';
+            // console.log('ll');
+            window.location.href = '../login/login.html'
         }, 1000);
-
     } else {
         alert("注册失败");
     }
-};
+
+}
+
+
+
+
+
